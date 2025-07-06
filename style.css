@@ -7,18 +7,41 @@ body {
     background: #f5f5f5;
 }
 
-header {
-    background: #4CAF50;
+/* Standaard header */
+#site-header {
+    position: fixed;          /* Maak hem sticky */
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8); /* semi-transparant */
     color: white;
-    text-align: center;
-    padding: 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    transition: all 0.3s ease;
+    z-index: 1000;            /* Blijf boven alles */
 }
 
-header nav a {
+/* Navigatielinks */
+#site-header nav a {
     color: white;
-    margin: 0 10px;
     text-decoration: none;
-    font-weight: bold;
+    margin-left: 1rem;
+    font-weight: 500;
+}
+
+#site-header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Compacte versie van de header */
+#site-header.shrink {
+    padding: 0.5rem 2rem;
+    background: rgba(0, 0, 0, 0.95);
+}
+
+#site-header.shrink .logo {
+    font-size: 1rem;
 }
 
 main {

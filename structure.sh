@@ -1,7 +1,8 @@
 /my-photo-portfolio
 ├── index.html
-├── styles.css
+├── cv.html 
+├── style.css
 ├── /images
-│   ├── place1.jpg
-│   ├── place2.jpg
-│   ├── place3.jpg
+│   ├── background.jpg
+│   ├── profilepic.jpg
+

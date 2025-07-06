@@ -8,17 +8,8 @@
 </head>
     
 <body class="home">
-    <header>
-        <h1>Maurien van der Linde</h1>
-        <p>Online portfolio</p>
-        <nav>
-            <a href="index.html" class="active">Home</a>            
-            <a href="#about">About</a>
-            <a href="cv.html">Curriculum vitae</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+    <!-- Header laden -->
+    <div id="header"></div>
 
     <main>
         <section id="about">
@@ -57,15 +48,23 @@
     </main>
 
     <!-- Footer wordt ingeladen -->
-        <div id="footer"></div>
+    <div id="footer"></div>
         
-        <script>
+    <script>
+        // Header loaden
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+
+        // Footer loaden
         fetch('footer.html')
             .then(response => response.text())
             .then(data => {
-            document.getElementById('footer').innerHTML = data;
+                document.getElementById('footer').innerHTML = data;
             });
-        </script>
+    </script>
 
 </body>
 </html>

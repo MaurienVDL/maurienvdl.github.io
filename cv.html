@@ -38,8 +38,15 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Maurien L. van der Linde</p>
-    </footer>
+    <!-- Footer wordt ingeladen -->
+    <div id="footer"></div>
+    
+    <script>
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById('footer').innerHTML = data;
+        });
+    </script>
 </body>
 </html>

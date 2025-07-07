@@ -7,7 +7,7 @@
     /* Header & Footer */
     --header-bg: rgba(233, 223, 215, 0.9); /* semi-transparent warm sand */
     --header-bg-shrink: rgba(233, 223, 215, 0.95);
-    --footer-bg: #E8CFC2; /* muted peach */
+    --footer-bg: rgba(233, 223, 215, 0.9); /* semi-transparent warm sand */
     --header-shadow: 0 4px 12px rgba(110, 97, 89, 0.2);
 
     /* Text */
@@ -208,10 +208,10 @@ footer {
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-.social.linkedin:hover { background: var(--accent-color-light); }
-.social.github:hover { background: var(--link-color); }
-.social.instagram:hover { background: var(--accent-color-hover); }
-.social[aria-label="Email"]:hover { background: var(--accent-color-muted); }
+.social.linkedin:hover { background: var(--footer-bg); }
+.social.github:hover { background: var(--footer-bg); }
+.social.instagram:hover { background: var(--footer-bg); }
+.social[aria-label="Email"]:hover { background: var(--footer-bg); }
 
 /* Animations */
 @keyframes fadeIn {

@@ -1,11 +1,12 @@
 /* Global styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;    
     padding: 0;
     line-height: 1.6;
     color: #333;
     background: #f5f5f5;
+    scroll-behavior: smooth; /* smooth scroll for anchor links */
 }
 
 /* Standaard header */
@@ -13,17 +14,22 @@ body {
     position: fixed;          /* Maak hem sticky */
     top: 0;
     width: 100%;
-    overflow-x: hidden;     /* hide any accidental overflow */
-    max-width: 100vw;       /* prevents horizontal scroll */
-    box-sizing: border-box; /* includes padding in width */
-    background: rgba(0, 0, 0, 0.8); /* semi-transparant */
+    overflow-x: hidden;
+    max-width: 100vw;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.8);
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    transition: all 0.3s ease;
-    z-index: 1000;            /* Blijf boven alles */
+    transition: all 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+}
+
+/* Add shadow when scrolling */
+#site-header.scrolled {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Navigatielinks */
@@ -32,15 +38,29 @@ body {
     text-decoration: none;
     margin-left: 1rem;
     font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
-#site-header nav a:hover {
-    text-decoration: underline;
+/* Underline animation on hover */
+#site-header nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background: #4CAF50;
+    transition: width 0.3s ease;
+}
+
+#site-header nav a:hover::after {
+    width: 100%;
 }
 
 /* Compacte versie van de header */
 #site-header.shrink {
-    padding: 0.2rem 1rem;
+    padding: 0.4rem 1rem;
     background: rgba(0, 0, 0, 0.95);
 }
 
@@ -50,8 +70,9 @@ body {
 
 main {
     max-width: 900px;
-    margin: 2rem auto;
+    margin: 5rem auto 2rem auto; /* added top margin to account for sticky header */
     padding: 1rem;
+    animation: fadeIn 1s ease;
 }
 
 section {
@@ -59,7 +80,13 @@ section {
     border-radius: 8px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
 h1, h2, h3 {
@@ -74,44 +101,33 @@ h1, h2, h3 {
     display: inline-block;
     margin-top: 0.5rem;
     color: #4CAF50;
-    text-decoration: underline;
-}
-
-a.linkedin {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    color: #0077B5; /* LinkedIn-blauw */
-    font-weight: bold;
     text-decoration: none;
+    position: relative;
     transition: color 0.3s ease;
 }
 
-a.linkedin svg {
-    fill: currentColor;
-    transition: transform 0.3s ease;
+.project a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 0%;
+    background-color: #4CAF50;
+    transition: width 0.3s ease;
 }
 
-a.linkedin:hover {
-    color: #005983; /* donkerdere blauw op hover */
+.project a:hover::after {
+    width: 100%;
 }
 
-a.linkedin:hover svg {
-    transform: scale(1.1);
-}
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    background: #333;
-    color: white;
-}
-
+/* Social bar improvements */
 .social-bar {
     margin-top: 1rem;
     display: flex;
     justify-content: center;
     gap: 1rem;
+    animation: fadeIn 1.5s ease;
 }
 
 .social {
@@ -121,35 +137,37 @@ footer {
     background: #555;
     color: white;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     text-decoration: none;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.social svg {
-    fill: currentColor;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .social:hover {
-    background: #4CAF50;
-    transform: scale(1.1);
+    transform: scale(1.15);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-.social.linkedin:hover {
-    background: #0077B5; /* LinkedIn blauw */
+.social.linkedin:hover { background: #0077B5; }
+.social.github:hover { background: #333; }
+.social.instagram:hover { background: #E4405F; }
+.social[aria-label="Email"]:hover { background: #D44638; }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+    font-size: 0.9rem;
 }
 
-.social.github:hover {
-    background: #333; /* GitHub zwart */
-}
-
-.social.instagram:hover {
-    background: #E4405F; /* Instagram roze */
-}
-
-.social[aria-label="Email"]:hover {
-    background: #D44638; /* Gmail rood */
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 

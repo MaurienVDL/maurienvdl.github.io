@@ -13,6 +13,9 @@ body {
     position: fixed;          /* Maak hem sticky */
     top: 0;
     width: 100%;
+    overflow-x: hidden;     /* hide any accidental overflow */
+    max-width: 100vw;       /* prevents horizontal scroll */
+    box-sizing: border-box; /* includes padding in width */
     background: rgba(0, 0, 0, 0.8); /* semi-transparant */
     color: white;
     display: flex;

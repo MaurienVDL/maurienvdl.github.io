@@ -132,10 +132,6 @@ section {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-section:first-of-type {
-    margin-top: 2rem; /* space above "About me" */
-}
-
 section:hover {
     transform: translateY(-4px);
     box-shadow: var(--card-shadow-hover);

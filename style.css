@@ -1,40 +1,41 @@
 /* Global styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;    
+    margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: #333;
-    background: #f5f5f5;
+    color: #4A4A4A; /* muted charcoal gray */
+    background: #FAF8F9; /* soft warm white */
     scroll-behavior: smooth; /* smooth scroll for anchor links */
 }
 
 /* Standaard header */
 #site-header {
-    position: fixed;          /* Maak hem sticky */
+    position: fixed;
     top: 0;
     width: 100%;
     overflow-x: hidden;
     max-width: 100vw;
     box-sizing: border-box;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
+    background: rgba(255, 240, 245, 0.8); /* blush pink semi-transparent */
+    color: #4A4A4A;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
     transition: all 0.3s ease, box-shadow 0.3s ease;
     z-index: 1000;
+    backdrop-filter: blur(8px); /* subtle glass effect */
 }
 
 /* Add shadow when scrolling */
 #site-header.scrolled {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(160, 100, 120, 0.3); /* muted plum shadow */
 }
 
 /* Navigatielinks */
 #site-header nav a {
-    color: white;
+    color: #6A4E77; /* muted plum */
     text-decoration: none;
     margin-left: 1rem;
     font-weight: 500;
@@ -50,8 +51,12 @@ body {
     height: 2px;
     left: 0;
     bottom: -4px;
-    background: #4CAF50;
+    background: #D7A7B4; /* soft dusty rose */
     transition: width 0.3s ease;
+}
+
+#site-header nav a:hover {
+    color: #D7A7B4;
 }
 
 #site-header nav a:hover::after {
@@ -61,7 +66,7 @@ body {
 /* Compacte versie van de header */
 #site-header.shrink {
     padding: 0.4rem 1rem;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(255, 240, 245, 0.95); /* slightly stronger blush */
 }
 
 #site-header.shrink .logo {
@@ -70,19 +75,19 @@ body {
 
 /* Parallax hero section */
 .hero {
-    height: 80vh; /* covers 80% of viewport height */
+    height: 80vh;
     background-image: url('your-photo.jpg'); /* <-- Replace with your image path */
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Enables parallax effect */
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #fff;
     text-align: center;
     font-size: 2.5rem;
     font-weight: bold;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3); /* subtle overlay */
+    box-shadow: inset 0 0 0 1000px rgba(110, 80, 100, 0.3); /* soft plum overlay */
 }
 
 .hero h1 {
@@ -91,39 +96,36 @@ body {
     margin: 0;
 }
 
+/* Main content */
 main {
     max-width: 900px;
-    margin: 5rem auto 2rem auto; /* added top margin to account for sticky header */
+    margin: 5rem auto 2rem auto;
     padding: 1rem;
     animation: fadeIn 1s ease;
 }
 
 section {
-    background: white;
+    background: #FFFFFF; /* pure white cards */
     border-radius: 8px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(160, 120, 140, 0.1); /* soft plum shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 section:hover {
     transform: translateY(-4px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 20px rgba(160, 120, 140, 0.2);
 }
 
 h1, h2, h3 {
-    color: #4CAF50;
-}
-
-.project {
-    margin-bottom: 1rem;
+    color: #B37A8E; /* elegant muted rose */
 }
 
 .project a {
     display: inline-block;
     margin-top: 0.5rem;
-    color: #4CAF50;
+    color: #B37A8E; /* muted rose */
     text-decoration: none;
     position: relative;
     transition: color 0.3s ease;
@@ -136,8 +138,12 @@ h1, h2, h3 {
     bottom: -2px;
     height: 2px;
     width: 0%;
-    background-color: #4CAF50;
+    background-color: #D7A7B4; /* dusty rose underline */
     transition: width 0.3s ease;
+}
+
+.project a:hover {
+    color: #D7A7B4;
 }
 
 .project a:hover::after {
@@ -157,7 +163,7 @@ h1, h2, h3 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: #555;
+    background: #C7BBCB; /* soft lavender-grey */
     color: white;
     border-radius: 50%;
     width: 48px;
@@ -173,17 +179,17 @@ h1, h2, h3 {
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-.social.linkedin:hover { background: #0077B5; }
-.social.github:hover { background: #333; }
-.social.instagram:hover { background: #E4405F; }
-.social[aria-label="Email"]:hover { background: #D44638; }
+.social.linkedin:hover { background: #A774A4; }
+.social.github:hover { background: #5A4E5A; }
+.social.instagram:hover { background: #D982A8; }
+.social[aria-label="Email"]:hover { background: #C06C84; }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 1rem;
-    background: #333;
-    color: white;
+    background: #C7BBCB; /* lavender-grey */
+    color: #4A4A4A;
     font-size: 0.9rem;
 }
 
@@ -192,6 +198,5 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
-
 
 

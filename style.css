@@ -7,7 +7,7 @@
     /* Header & Footer */
     --header-bg: rgba(233, 223, 215, 0.9); /* semi-transparent warm sand */
     --header-bg-shrink: rgba(233, 223, 215, 0.95);
-    --footer-bg: rgba(233, 223, 215, 0.9); /* semi-transparent warm sand */
+    --footer-bg: #F9F6F2;
     --header-shadow: 0 4px 12px rgba(110, 97, 89, 0.2);
 
     /* Text */
@@ -176,7 +176,6 @@ footer {
     background: var(--footer-bg);
     color: var(--text-color);
     font-size: 0.9rem;
-    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.25);
 }
 
 /* Social Bar */

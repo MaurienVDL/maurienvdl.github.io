@@ -191,7 +191,7 @@ footer {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: var(--accent-color-hover);
+    background: var(--footer-bg);
     color: white;
     border-radius: 50%;
     width: 48px;

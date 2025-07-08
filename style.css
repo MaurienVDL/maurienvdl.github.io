@@ -177,6 +177,25 @@ h1, h2, h3 {
   line-height: 1.6;
 }
 
+.collapse.hidden {
+  display: none;
+}
+
+.toggle-btn {
+  background-color: #7FA87F;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.toggle-btn:hover {
+  background-color: #6F9970;
+}
+
 .project a {
     display: inline-block;
     margin-top: 0.5rem;

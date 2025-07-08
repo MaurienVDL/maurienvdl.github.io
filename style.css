@@ -14,12 +14,11 @@
     --link-color: #6E6159; /* taupe */
 
     /* Accents */
-    --accent-color: #7FA87F; /* more intense sage green */
+    --accent-color: #6F9970; /* more intense sage green */
     --accent-color-light: #A3B9A5; /* soft sage */
     --accent-color-muted: #C8A59C; /* dusty mauve */
     --accent-color-hover: #E8CFC2; /* muted peach */
     --button-bg: #7FA87F;
-    --button-bg-hover: #6F9970;
 
     /* Cards & Sections */
     --card-bg: #FFFFFF;

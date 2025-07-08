@@ -139,6 +139,40 @@ h1, h2, h3 {
     color: var(--accent-color);
 }
 
+.about-section {
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* stack on smaller screens */
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* circular image */
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0; /* prevent image from shrinking */
+}
+
+.about-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
 .project a {
     display: inline-block;
     margin-top: 0.5rem;

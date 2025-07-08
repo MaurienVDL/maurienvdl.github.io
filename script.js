@@ -31,8 +31,6 @@ window.addEventListener('scroll', function () {
     }
 });
 
-
-
 document.querySelectorAll('.toggle-btn').forEach(button => {
   button.addEventListener('click', () => {
     const group = button.previousElementSibling.querySelectorAll('.collapse');

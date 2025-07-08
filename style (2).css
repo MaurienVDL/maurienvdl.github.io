@@ -1,0 +1,293 @@
+:root {
+    /* Backgrounds */
+    --background-light: #F9F6F2; /* warm sand */
+    --background-medium: #E8E1DB; /* soft beige */
+
+    /* Header & Footer */
+    --header-bg: rgba(233, 223, 215, 0.9); /* semi-transparent warm sand */
+    --header-bg-shrink: rgba(233, 223, 215, 0.95);
+    --footer-bg: #F9F6F2;
+    --header-shadow: 0 4px 12px rgba(110, 97, 89, 0.2);
+
+    /* Text */
+    --text-color: #3E3E3E; /* soft charcoal */
+    --link-color: #6E6159; /* taupe */
+
+    /* Accents */
+    --accent-color: #6F9970; /* more intense sage green */
+    --accent-color-light: #A3B9A5; /* soft sage */
+    --accent-color-muted: #C8A59C; /* dusty mauve */
+    --accent-color-hover: #E8CFC2; /* muted peach */
+    --button-bg: #7FA87F;
+
+    /* Cards & Sections */
+    --card-bg: #FFFFFF;
+    --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --card-shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Global styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--background-light);
+    scroll-behavior: smooth;
+}
+
+/* Header */
+#site-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow-x: hidden;
+    max-width: 100vw;
+    box-sizing: border-box;
+    background: var(--header-bg);
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: var(--header-shadow);
+}
+
+#site-header.shrink {
+    padding: 0.75rem 2rem; /* Half the height */
+    background: var(--header-bg-shrink);
+}
+
+#site-header nav a {
+    color: var(--link-color);
+    text-decoration: none;
+    margin-left: 1rem;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+#site-header nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+#site-header nav a:hover {
+    color: var(--accent-color);
+}
+
+#site-header nav a:hover::after {
+    width: 100%;
+}
+
+/* Hero */
+.hero {
+    height: 80vh;
+    background-image: url('your-photo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    box-shadow: inset 0 0 0 1000px rgba(110, 97, 89, 0.3);
+}
+
+.hero h1 {
+    animation: fadeIn 1.5s ease;
+    font-size: 3rem;
+    margin: 0;
+}
+
+/* Main content */
+main {
+    max-width: 900px;
+    margin: 7rem auto 2rem auto; /* top margin for sticky header */
+    padding: 1rem;
+    animation: fadeIn 1s ease;
+}
+
+/* Sections */
+section {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem; /* uniform spacing between boxes */
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+h1, h2, h3 {
+    color: var(--accent-color);
+}
+
+.about-section {
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* stack on small screens */
+}
+
+.profile-pic {
+  width: 180px;
+  height: auto; /* keep aspect ratio */
+  border-radius: 1rem; /* 🆕 round edges instead of circle */
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.about-content {
+  flex: 1; /* allow text to take up remaining space */
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.collapse {
+  display: none;
+}
+.collapse.show {
+  display: block;
+}
+
+/* Zorg dat hidden elementen mooi inklappen */
+.cv-group ul .collapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+  opacity: 0;
+}
+
+.cv-group ul .collapse.show {
+  max-height: 500px; /* genoeg ruimte voor meerdere items */
+  opacity: 1;
+}
+
+/* Knop styling */
+.toggle-btn {
+  background-color: #7FA87F;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  margin: 0.5em 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #6F9970;
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.project a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 0%;
+    background-color: var(--accent-color-hover);
+    transition: width 0.3s ease;
+}
+
+.project a:hover {
+    color: var(--link-color);
+}
+
+.project a:hover::after {
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--footer-bg);
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+/* Social Bar */
+.social-bar {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    animation: fadeIn 1.5s ease;
+}
+
+.social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--footer-bg);
+    color: var(--text-color);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social:hover {
+    transform: scale(1.15);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.social.linkedin:hover { background: var(--footer-bg); }
+.social.github:hover { background: var(--footer-bg); }
+.social.instagram:hover { background: var(--footer-bg); }
+.social[aria-label="Email"]:hover { background: var(--footer-bg); }
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+

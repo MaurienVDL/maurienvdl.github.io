@@ -1,0 +1,141 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maurien L. van der Linde</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    
+<body class="home">
+    <!-- Header laden -->
+    <div id="header"></div>
+
+    <main>
+        <section id="about" class="about-section">
+          <div class="about-container">
+            <img 
+              src="images/profilepic.jpg" 
+              alt="Portrait of Maurien L. van der Linde" 
+              class="profile-pic"
+              width="215" height="268"
+              loading="lazy"
+            >
+            <div class="about-content">
+              <h2>About Me</h2>
+              <p>Hello! I'm Maurien, a creative developer passionate about building beautiful and functional websites. I love working on responsive designs and experimenting with new technologies.</p>
+            </div>
+          </div>
+        </section>
+
+
+       <section id="cv" class="cv-section">
+          <h2>Curriculum Vitae</h2>
+        
+          <!-- EXPERIENCE -->
+          <h3>Experience</h3>
+          <div class="cv-group">
+            <ul>
+              <li><strong>2025–Present</strong>: Data Scientist at Science & Technology</li>
+              <li><strong>2025–Present</strong>: Elected member of the Faculty Council for the Faculty of Science and Mathematics</li>
+            </ul>
+            <div class="collapse hidden">
+              <ul>
+                <li><strong>2022–Present</strong>: Policy Assistant for a local political party (municipal level)</li>
+                <li><strong>2024–2025</strong>: Internship at Science & Technology</li>
+                <li><strong>2022–2024</strong>: Hospitality Staff at various restaurants</li>
+                <li><strong>2021–2023</strong>: Mentor for first-year students at Study Association De Leidsche Flesch</li>
+                <li><strong>2016–2020</strong>: Greenhouse Assistant</li>
+              </ul>
+            </div>
+            <button class="toggle-btn">Show more</button>
+          </div>
+        
+          <!-- EDUCATION -->
+          <h3>Education</h3>
+          <div class="cv-group">
+            <ul>
+              <li><strong>2023–Present</strong>: Master in Astronomy and Data Science - University of Leiden</li>
+              <li><strong>2019–2023</strong>: Bachelor in Astronomy - University of Leiden</li>
+            </ul>
+            <div class="collapse hidden">
+              <ul>
+                <li><strong>2019-2020</strong>: Propaedeutic Diploma in Physics - University of Leiden</li>
+                <li><strong>2017-2019</strong>: Pre-university education (VWO)</li>
+                <li><strong>2012-2017</strong>: Senior general secondary education (HAVO)</li>
+              </ul>
+            </div>
+            <button class="toggle-btn">Show more</button>
+          </div>
+        
+          <!-- LICENSES & CERTIFICATES -->
+          <h3>Licenses and Certificates</h3>
+          <div class="cv-group">
+            <div class="collapse hidden">
+              <ul>
+                <li><strong>2024</strong>: Dutch Small Boat Licenses 1 & 2</li>
+                <li><strong>2023</strong>: Adobe Premiere Pro base (Competence Factory)</li>
+                <li><strong>2022</strong>: Microsoft Certified: Azure Fundamentals (Microsoft)</li>
+                <li><strong>2022</strong>: Seminar on Computational Physics (Leiden Institute of Physics)</li>
+                <li><strong>2017</strong>: Driving license Category B</li>
+              </ul>
+            </div>
+            <button class="toggle-btn">Show Licenses</button>
+          </div>
+        
+          <!-- VOLUNTEERING -->
+          <h3>Volunteering</h3>
+          <div class="cv-group">
+            <div class="collapse hidden">
+              <ul>
+                <li><strong>2020–2023</strong>: Committee work at Study Association De Leidsche Flesch</li>
+                <li><strong>2021–2023</strong>: Committee work at a youth political movement</li>
+                <li><strong>2021–2022</strong>: Board Member of Study Association Leidsch Astronomisch Dispuut Frederik Kaiser</li>
+              </ul>
+            </div>
+            <button class="toggle-btn">Show Volunteering</button>
+          </div>
+        
+          <a href="cv.pdf" class="btn" download>Download CV (PDF)</a>
+        </section>
+
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project 1</h3>
+                <p>Short description of your project goes here.</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <p>Short description of your project goes here.</p>
+                <a href="#">View Project</a>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+                <p>
+                    Send me an 
+                    <a href="mailto:contact@maurienvdl.nl">email</a> 
+                    or connect with me on 
+                    <a href="https://www.linkedin.com/in/maurien-van-der-linde-4841b0247/" class="linkedin" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.324 0 .725 0h14.55c.4 0 .725.513.725 1.146v13.708c0 .633-.324 1.146-.725 1.146H.724A.723.723 0 0 1 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.216c.837 0 1.356-.554 1.356-1.248-.015-.708-.519-1.248-1.341-1.248-.822 0-1.356.54-1.356 1.248 0 .694.519 1.248 1.326 1.248h.015zm4.908 8.216V9.359c0-.215.016-.43.08-.584.176-.43.577-.875 1.25-.875.881 0 1.233.66 1.233 1.627v3.867h2.4v-4.144c0-2.219-1.183-3.251-2.763-3.251-1.274 0-1.845.7-2.158 1.192h.03v-1.026H8.651c.03.666 0 7.225 0 7.225h2.4z"/>
+                        </svg>
+                        LinkedIn
+                    </a>.
+                </p>
+        </section>
+    </main>
+
+    <!-- Footer wordt ingeladen -->
+    <div id="footer"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+

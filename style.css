@@ -184,6 +184,19 @@ h1, h2, h3 {
   display: block;
 }
 
+/* Zorg dat hidden elementen mooi inklappen */
+.cv-group ul .collapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+  opacity: 0;
+}
+
+.cv-group ul .collapse.show {
+  max-height: 500px; /* genoeg ruimte voor meerdere items */
+  opacity: 1;
+}
+
 /* Knop styling */
 .toggle-btn {
   background-color: #7FA87F;

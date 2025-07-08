@@ -1,16 +1,35 @@
-// Header loaden
-fetch('header.html')
+document.addEventListener('DOMContentLoaded', () => {
+  // Header laden
+  fetch('header.html')
     .then(response => response.text())
     .then(data => {
-        document.getElementById('header').innerHTML = data;
+      document.getElementById('header').innerHTML = data;
     });
 
-// Footer loaden
-fetch('footer.html')
+  // Footer laden
+  fetch('footer.html')
     .then(response => response.text())
     .then(data => {
-        document.getElementById('footer').innerHTML = data;
+      document.getElementById('footer').innerHTML = data;
     });
+
+  // Toggle buttons
+  document.querySelectorAll('.toggle-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const group = button.previousElementSibling.querySelectorAll('.collapse');
+
+      group.forEach(item => {
+        item.classList.toggle('show');
+      });
+
+      if (button.textContent.includes('Show')) {
+        button.textContent = button.textContent.replace('Show', 'Hide');
+      } else {
+        button.textContent = button.textContent.replace('Hide', 'Show');
+      }
+    });
+  });
+});
 
 // Header scroll function
 window.addEventListener('scroll', function() {

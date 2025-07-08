@@ -1,19 +1,17 @@
-const toggleButtons = document.querySelectorAll(".toggle-btn");
+document.querySelectorAll('.toggle-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const group = button.previousElementSibling.querySelectorAll('.collapse');
 
-toggleButtons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const collapse = btn.previousElementSibling;
-    collapse.classList.toggle("hidden");
-    btn.textContent = collapse.classList.contains("hidden")
-      ? btn.textContent.includes("Licenses")
-        ? "Show Licenses"
-        : btn.textContent.includes("Volunteering")
-        ? "Show Volunteering"
-        : "Show more"
-      : btn.textContent.includes("Licenses")
-      ? "Hide Licenses"
-      : btn.textContent.includes("Volunteering")
-      ? "Hide Volunteering"
-      : "Show less";
+    group.forEach(item => {
+      item.classList.toggle('show');
+    });
+
+    // Toggle button text
+    if (button.textContent.includes('Show')) {
+      button.textContent = button.textContent.replace('Show', 'Hide');
+    } else {
+      button.textContent = button.textContent.replace('Hide', 'Show');
+    }
   });
 });
+

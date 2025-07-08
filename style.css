@@ -177,19 +177,30 @@ h1, h2, h3 {
   line-height: 1.6;
 }
 
+/* Verberg de verborgen items */
 .collapse.hidden {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
 }
 
+.collapse.show {
+  max-height: 1000px; /* groot genoeg om alles te tonen */
+  opacity: 1;
+}
+
+/* Knop styling */
 .toggle-btn {
   background-color: #7FA87F;
   color: white;
   border: none;
-  padding: 0.4rem 0.8rem;
-  margin: 0.5rem 0;
+  padding: 0.5em 1em;
+  margin: 0.5em 0;
+  border-radius: 5px;
   cursor: pointer;
-  border-radius: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
 .toggle-btn:hover {

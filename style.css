@@ -210,6 +210,22 @@ h1, h2, h3 {
   transition: background-color 0.3s ease;
 }
 
+.toggle-btn.open {
+  transform: rotate(180deg); /* Draait pijltje naar boven ▲ */
+}
+
+.collapse {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.collapse.show {
+  max-height: 500px; /* groot genoeg voor meerdere regels */
+  opacity: 1;
+}
+
 .toggle-btn:hover {
   background-color: #6F9970;
 }

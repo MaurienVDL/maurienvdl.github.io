@@ -1,37 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Header laden
+  // ✅ Header laden
   fetch('header.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('header').innerHTML = data;
     });
 
-  // Footer laden
+  // ✅ Footer laden
   fetch('footer.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('footer').innerHTML = data;
     });
 
-  // Show/Hide toggle voor de CV-secties
+  // ✅ Toggle buttons met pijltje
   document.querySelectorAll('.toggle-btn').forEach(button => {
     button.addEventListener('click', () => {
       const collapsibles = button.previousElementSibling.querySelectorAll('.collapse');
 
       collapsibles.forEach(item => {
-        item.classList.toggle('show'); // Voeg de 'show'-class toe of verwijder hem
+        item.classList.toggle('show'); // Toon of verberg de inhoud
       });
 
-      // Tekst van de knop aanpassen
-      if (button.textContent.includes('Show')) {
-        button.textContent = button.textContent.replace('Show', 'Hide');
-      } else {
-        button.textContent = button.textContent.replace('Hide', 'Show');
-      }
+      // ✅ Pijltje draaien
+      button.classList.toggle('open');
     });
   });
 
-  // Scroll-effect voor header
+  // ✅ Scroll-effect voor header
   window.addEventListener('scroll', () => {
     const header = document.getElementById('site-header');
     if (!header) return; // Als er geen header is, niks doen
@@ -49,3 +45,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+

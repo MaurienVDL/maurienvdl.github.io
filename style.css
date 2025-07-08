@@ -150,20 +150,24 @@ h1, h2, h3 {
   gap: 1.5rem;
   max-width: 800px;
   margin: 0 auto;
-  flex-wrap: wrap; /* stack on smaller screens */
+  flex-wrap: wrap; /* stack on small screens */
 }
 
 .profile-pic {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%; /* circular image */
+  width: 180px;
+  height: auto; /* keep aspect ratio */
+  border-radius: 1rem; /* 🆕 round edges instead of circle */
   object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  flex-shrink: 0; /* prevent image from shrinking */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.about-content {
+  flex: 1; /* allow text to take up remaining space */
 }
 
 .about-content h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 

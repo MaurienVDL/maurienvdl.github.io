@@ -178,15 +178,11 @@ h1, h2, h3 {
 }
 
 .collapse {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.5s ease, opacity 0.5s ease;
+  display: none;
 }
 
 .collapse.show {
-  max-height: 500px; /* groot genoeg voor meerdere regels */
-  opacity: 1;
+  display: block;
 }
 
 /* Zorg dat hidden elementen mooi inklappen */

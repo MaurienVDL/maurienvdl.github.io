@@ -187,6 +187,7 @@ h1, h2, h3 {
 
 .collapse {
   padding: 0; /* Prevent spacing before collapse content */
+  margin:0;
 }
 
 /* Zorg dat hidden elementen mooi inklappen */
@@ -328,6 +329,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // ✅ Knoptekst aanpassen
       if (button.textContent.includes('Show')) {
-        button.textContent = button.textContent.replace('Show', 'Hide');
+        button.textContent = button.textContent.replace('more', 'less');
       } else {
-        button.textContent = button.textContent.replace('Hide', 'Show');
+        button.textContent = button.textContent.replace('less', 'more');
       }
     });
   });

@@ -50,4 +50,16 @@ document.addEventListener('DOMContentLoaded', () => {
       header.classList.remove('scrolled');
     }
   });
+
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.skill-level').forEach(el => {
+      const width = el.style.width;
+      el.style.width = '0';
+      setTimeout(() => {
+        el.style.width = width;
+      }, 100); // Small delay to trigger transition
+    });
+  });
+
+  
 });

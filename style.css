@@ -3,7 +3,7 @@
     --background-light: #F9F6F2; /* warm sand */
     --background-medium: #E8E1DB; /* soft beige */
 
-    /* Header & Footer */
+    /* Header & Footer *
     --header-bg: rgba(233, 223, 215, 0.9); /* semi-transparent warm sand */
     --header-bg-shrink: rgba(233, 223, 215, 0.95);
     --footer-bg: #F9F6F2;
@@ -13,7 +13,7 @@
     --text-color: #3E3E3E; /* soft charcoal */
     --link-color: #6E6159; /* taupe */
 
-    /* Accents */
+    /* Accents *
     --accent-color: #6F9970; /* more intense sage green */
     --accent-color-light: #A3B9A5; /* soft sage */
     --accent-color-muted: #C8A59C; /* dusty mauve */
@@ -204,7 +204,7 @@ h1, h2, h3 {
 
 /* Knop styling */
 .toggle-btn {
-  background-color: #7FA87F;
+  background-color: --button-bg;
   color: white;
   border: none;
   padding: 0.5em 1em;
@@ -216,7 +216,37 @@ h1, h2, h3 {
 }
 
 .toggle-btn:hover {
-  background-color: #6F9970;
+  background-color: --accent-color;
+}
+
+.skills-section {
+  max-width: 600px;
+  margin-top: 1rem;
+}
+
+.skill {
+  margin-bottom: 1rem;
+}
+
+.skill-name {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+.skill-bar {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  height: 12px;
+  overflow: hidden;
+}
+
+.skill-level {
+  background-color: #4caf50;
+  height: 100%;
+  width: 0;
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
 }
 
 .project a {
@@ -295,6 +325,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

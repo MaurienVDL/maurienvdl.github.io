@@ -185,6 +185,13 @@ h1, h2, h3 {
   display: block;
 }
 
+.cv-group ul,
+.cv-group li,
+.collapse {
+  margin: 0;
+  padding: 0;
+}
+
 /* Zorg dat hidden elementen mooi inklappen */
 .cv-group ul .collapse {
   max-height: 0;
@@ -291,4 +298,5 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 

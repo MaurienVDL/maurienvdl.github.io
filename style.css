@@ -222,36 +222,46 @@ h1, h2, h3 {
 
 /* Skill Bars */
 .skills-section {
-  max-width: 600px;
-  margin-top: 2rem;
+  max-width: 100%;
+}
+
+.skill-category {
+  margin-bottom: 1.5rem;
+}
+
+.skill-category h4 {
+  margin-bottom: 0.8rem;
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  border-bottom: 1px solid var(--accent-color-light);
+  padding-bottom: 0.3rem;
 }
 
 .skill {
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.8rem;
 }
 
-.skill-name {
+.skill span {
   display: block;
-  margin-bottom: 0.3rem;
-  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
   color: var(--text-color);
 }
 
 .skill-bar {
-  background-color: var(--background-medium); /* soft beige background */
-  border-radius: 10px;
-  height: 12px;
+  background-color: var(--background-medium);
+  border-radius: 6px;
+  height: 8px;
   overflow: hidden;
 }
 
 .skill-level {
-  background-color: var(--accent-color); /* sage green */
+  background-color: var(--accent-color);
   height: 100%;
   width: 0;
-  border-radius: 10px;
+  border-radius: 6px;
   transition: width 1s ease-in-out;
 }
-
 
 .project a {
     display: inline-block;
@@ -329,6 +339,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

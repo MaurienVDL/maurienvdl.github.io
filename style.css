@@ -204,7 +204,7 @@ h1, h2, h3 {
 
 /* Knop styling */
 .toggle-btn {
-  background-color: #7FA87F;
+  background-color: var(--button-bg);
   color: white;
   border: none;
   padding: 0.5em 1em;
@@ -218,6 +218,39 @@ h1, h2, h3 {
 .toggle-btn:hover {
   background-color: #6F9970;
 }
+
+/* Skill Bars */
+.skills-section {
+  max-width: 600px;
+  margin-top: 2rem;
+}
+
+.skill {
+  margin-bottom: 1.2rem;
+}
+
+.skill-name {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.skill-bar {
+  background-color: var(--background-medium); /* soft beige background */
+  border-radius: 10px;
+  height: 12px;
+  overflow: hidden;
+}
+
+.skill-level {
+  background-color: var(--accent-color); /* sage green */
+  height: 100%;
+  width: 0;
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+}
+
 
 .project a {
     display: inline-block;
@@ -295,6 +328,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

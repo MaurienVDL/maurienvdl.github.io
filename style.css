@@ -175,40 +175,45 @@ h1, h2, h3, h4 {
   color: #555;
   line-height: 1.6;
 }
-
+/* Collapse container list styling */
 .collapse ul {
   margin: 0;
   list-style-position: inside;
 }
 
+/* Base collapse style - hidden by default */
 .collapse {
   padding: 0;
   margin: 0;
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+  visibility: hidden; /* 🔧 Added to ensure it’s not focusable/tabbable */
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out, visibility 0.5s ease-out;
 }
 
+/* Shown state */
 .collapse.show {
-  max-height: 500px; /* enough space for content */
+  max-height: 500px; /* ⚠️ Works if you know the height; JS can help with auto */
   opacity: 1;
+  visibility: visible;
 }
 
+/* Minimal toggle button styling */
 .toggle-btn {
-  background-color: transparent;   /* No solid background */
-  color: var(--accent-color);      /* Use your accent color for text */
-  border: 1px solid var(--accent-color); /* Thin border */
-  padding: 0.3em 0.6em;            /* Smaller padding */
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  padding: 0.3em 0.6em;
   margin: 0.5em 0;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 0.85rem;              /* Smaller text */
+  font-size: 0.85rem;
   transition: all 0.2s ease;
 }
 
 .toggle-btn:hover {
-  background-color: var(--accent-color-light); /* Light hover effect */
+  background-color: var(--accent-color-light);
   color: white;
   border-color: var(--accent-color-light);
 }
@@ -356,6 +361,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

@@ -182,25 +182,18 @@ h1, h2, h3, h4 {
 }
 
 .collapse {
-  padding: 0; /* Prevent spacing before collapse content */
+  padding: 0;
   margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
 }
 
 .collapse.show {
-  display: block;
-}
-
-/* Zorg dat hidden elementen mooi inklappen */
-.cv-group ul .collapse {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
-  opacity: 0;
-}
-
-.cv-group ul .collapse.show {
-  max-height: 500px; /* genoeg ruimte voor meerdere items */
+  max-height: 500px; /* enough space for content */
   opacity: 1;
+  display: block;
 }
 
 .toggle-btn {
@@ -364,6 +357,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

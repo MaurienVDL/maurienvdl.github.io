@@ -16,22 +16,18 @@ document.addEventListener('DOMContentLoaded', () => {
   // ✅ Show more / Show less knoppen
   document.querySelectorAll('.toggle-btn').forEach(button => {
     button.addEventListener('click', () => {
-      const cvGroup = button.closest('.cv-group'); // vind de container
-      const hiddenItems = cvGroup.querySelectorAll('.collapse');
-
-      hiddenItems.forEach(item => {
-        item.classList.toggle('show');
-        item.classList.toggle('hidden'); // toggle hidden class
-      });
-
-      // ✅ Knoptekst aanpassen
-      if (button.textContent.includes('more')) {
-        button.textContent = button.textContent.replace('more', 'less');
-      } else if (button.textContent.includes('less')){
-        button.textContent = button.textContent.replace('less', 'more');
-      }
+      const cvGroup = button.closest('.cv-group');
+      const collapsible = cvGroup.querySelector('.collapse');
+  
+      collapsible.classList.toggle('show');
+  
+      button.textContent = collapsible.classList.contains('show')
+        ? 'Show less'
+        : 'Show more';
     });
   });
+
+  
 
   // ✅ Scroll-effect voor header
   window.addEventListener('scroll', () => {

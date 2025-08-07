@@ -55,7 +55,7 @@ main section {
 h1, h2, h3, h4 {
   margin-top: var(--space-lg);
   margin-bottom: var(--space-sm);
-  color: var(--accent-color-light);
+  color: var(--accent-color);
 }
 
 /* Header */
@@ -98,12 +98,12 @@ h1, h2, h3, h4 {
     height: 2px;
     left: 0;
     bottom: -4px;
-    background: var(--accent-color-light);
+    background: var(--accent-color);
     transition: width 0.3s ease;
 }
 
 #site-header nav a:hover {
-    color: var(--accent-color-light);
+    color: var(--accent-color);
 }
 
 #site-header nav a:hover::after {
@@ -244,9 +244,9 @@ section:hover {
 }
 
 .toggle-btn:hover {
-  background-color: var(--accent-color-light);
+  background-color: var(--accent-color);
   color: white;
-  border-color: var(--accent-color-light);
+  border-color: var(--accent-color);
 }
 
 /* Skill Bars */
@@ -267,7 +267,7 @@ section:hover {
 .skill-category h4 {
   margin-bottom: 0.8rem;
   font-size: 1.0rem;
-  border-bottom: 1px solid var(--accent-color-light);
+  border-bottom: 1px solid var(--accent-color);
   padding-bottom: 0.3rem;
 }
 
@@ -290,7 +290,7 @@ section:hover {
 }
 
 .skill-level {
-  background-color: var(--accent-color-light);
+  background-color: var(--accent-color);
   height: 100%;
   width: 0;
   border-radius: 6px;
@@ -317,7 +317,7 @@ section:hover {
 .project a {
     display: inline-block;
     margin-top: 0.5rem;
-    color: var(--accent-color-light);
+    color: var(--accent-color);
     text-decoration: none;
     position: relative;
     transition: color 0.3s ease;
@@ -390,6 +390,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

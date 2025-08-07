@@ -256,7 +256,7 @@ h1, h2, h3, h4 {
 }
 
 .skill-bar {
-  background-color: var(--background-medium);
+  background-color: var(--background-light);
   border-radius: 6px;
   height: 8px;
   overflow: hidden;
@@ -364,6 +364,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

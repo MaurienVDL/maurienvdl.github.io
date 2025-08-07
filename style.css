@@ -203,21 +203,22 @@ h1, h2, h3, h4 {
   opacity: 1;
 }
 
-/* Knop styling */
 .toggle-btn {
-  background-color: var(--button-bg);
-  color: white;
-  border: none;
-  padding: 0.5em 1em;
+  background-color: transparent;   /* No solid background */
+  color: var(--accent-color);      /* Use your accent color for text */
+  border: 1px solid var(--accent-color); /* Thin border */
+  padding: 0.3em 0.6em;            /* Smaller padding */
   margin: 0.5em 0;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
+  font-size: 0.85rem;              /* Smaller text */
+  transition: all 0.2s ease;
 }
 
 .toggle-btn:hover {
-  background-color: var(--accent-color-light);
+  background-color: var(--accent-color-light); /* Light hover effect */
+  color: white;
+  border-color: var(--accent-color-light);
 }
 
 /* Skill Bars */
@@ -363,6 +364,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

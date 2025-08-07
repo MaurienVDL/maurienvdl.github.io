@@ -177,14 +177,6 @@ h1, h2, h3, h4 {
   line-height: 1.6;
 }
 
-.collapse.hidden {
-  display: none;
-}
-
-.collapse.show {
-  display: block;
-}
-
 .collapse ul {
   margin: 0;
   list-style-position: inside;
@@ -369,6 +361,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

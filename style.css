@@ -141,7 +141,6 @@ h1, h2, h3, h4 {
 
 .about-section {
   padding: 2rem;
-  background-color: #f9f9f9;
 }
 
 .about-container {
@@ -361,6 +360,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

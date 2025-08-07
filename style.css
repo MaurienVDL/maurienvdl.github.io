@@ -77,12 +77,12 @@ body {
     height: 2px;
     left: 0;
     bottom: -4px;
-    background: var(--accent-color);
+    background: var(--accent-color-light);
     transition: width 0.3s ease;
 }
 
 #site-header nav a:hover {
-    color: var(--accent-color);
+    color: var(--accent-color-light);
 }
 
 #site-header nav a:hover::after {
@@ -136,7 +136,7 @@ section:hover {
 }
 
 h1, h2, h3 {
-    color: var(--accent-color);
+    color: var(--accent-color-light);
 }
 
 .about-section {
@@ -217,12 +217,12 @@ h1, h2, h3 {
 }
 
 .toggle-btn:hover {
-  background-color: #6F9970;
+  background-color: var(--accent-color-light);
 }
 
 /* Skill Bars */
 .skills-section {
-  max-width: 50%;
+  max-width: 30%;
 }
 
 .skill-category {
@@ -231,7 +231,7 @@ h1, h2, h3 {
 
 .skill-category h4 {
   margin-bottom: 0.8rem;
-  color: var(--accent-color);
+  color: var(--accent-color-light);
   font-size: 1.1rem;
   border-bottom: 1px solid var(--accent-color-light);
   padding-bottom: 0.3rem;
@@ -256,7 +256,7 @@ h1, h2, h3 {
 }
 
 .skill-level {
-  background-color: var(--accent-color);
+  background-color: var(--accent-color-light);
   height: 100%;
   width: 0;
   border-radius: 6px;
@@ -284,7 +284,7 @@ h1, h2, h3 {
 .project a {
     display: inline-block;
     margin-top: 0.5rem;
-    color: var(--accent-color);
+    color: var(--accent-color-light);
     text-decoration: none;
     position: relative;
     transition: color 0.3s ease;
@@ -357,6 +357,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

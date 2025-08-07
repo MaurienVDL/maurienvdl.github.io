@@ -186,10 +186,6 @@ h1, h2, h3, h4 {
   margin: 0;
 }
 
-.collapse.hidden {
-  display: none;
-}
-
 .collapse.show {
   display: block;
 }
@@ -368,6 +364,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

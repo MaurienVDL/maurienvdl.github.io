@@ -4,8 +4,8 @@
     --background-medium: #E8E1DB; /* soft beige */
 
     /* Header & Footer */
-    --header-bg: var(--background-medium); 
-    --header-bg-shrink: var(--background-medium);
+    --header-bg: var(--background-light); 
+    --header-bg-shrink: var(--background-light);
     --footer-bg: var(--background-light);
     --header-shadow: 0 4px 12px rgba(110, 97, 89, 0.2);
 
@@ -364,6 +364,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

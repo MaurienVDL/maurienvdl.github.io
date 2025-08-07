@@ -232,8 +232,8 @@ section:hover {
 /* Minimal toggle button styling */
 .toggle-btn {
   background-color: transparent;
-  color: var(--accent-color);
-  border: 1px solid var(--accent-color);
+  color: var(--accent-color-light);
+  border: 1px solid var(--accent-color-light);
   margin-top: var(--space-xs);
   margin-bottom: var(--space-sm);
   margin: 0.5em 0;*/
@@ -244,9 +244,9 @@ section:hover {
 }
 
 .toggle-btn:hover {
-  background-color: var(--accent-color);
+  background-color: var(--accent-color-light);
   color: white;
-  border-color: var(--accent-color);
+  border-color: var(--accent-color-light);
 }
 
 /* Skill Bars */
@@ -290,7 +290,7 @@ section:hover {
 }
 
 .skill-level {
-  background-color: var(--accent-color);
+  background-color: var(--accent-color-light);
   height: 100%;
   width: 0;
   border-radius: 6px;
@@ -390,6 +390,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

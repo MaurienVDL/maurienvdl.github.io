@@ -27,8 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // ✅ Knoptekst aanpassen
       if (button.textContent.includes('more')) {
         button.textContent = button.textContent.replace('more', 'less');
-      } 
-      if (button.textContent.includes('less')){
+      } else if (button.textContent.includes('less')){
         button.textContent = button.textContent.replace('less', 'more');
       }
     });

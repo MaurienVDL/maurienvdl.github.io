@@ -45,6 +45,13 @@ body {
     scroll-behavior: smooth;
 }
 
+main section {
+  max-width: 900px;       /* or whatever width you prefer */
+  margin: 2rem auto;      /* centers horizontally and adds vertical spacing */
+  padding: 1rem 1.5rem;   /* some padding inside */
+  box-sizing: border-box; /* makes padding not add to width */
+}
+
 h1, h2, h3, h4 {
   margin-top: var(--space-lg);
   margin-bottom: var(--space-sm);
@@ -308,7 +315,6 @@ section:hover {
   }
 }
 
-
 .project a {
     display: inline-block;
     margin-top: 0.5rem;
@@ -385,6 +391,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

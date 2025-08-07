@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       hiddenItems.forEach(item => {
         item.classList.toggle('show');
-       // item.classList.toggle('hidden'); // toggle hidden class
+        item.classList.toggle('hidden'); // toggle hidden class
       });
 
       // ✅ Knoptekst aanpassen

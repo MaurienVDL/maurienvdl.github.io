@@ -57,7 +57,7 @@ body {
 }
 
 #site-header.shrink {
-    padding: 0.1rem 0.5rem; /* Half the height */
+    padding: 0rem 1rem; /* Half the height */
     background: var(--header-bg-shrink);
 }
 
@@ -367,6 +367,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

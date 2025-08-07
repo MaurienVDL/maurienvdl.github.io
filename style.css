@@ -129,7 +129,7 @@ h1, h2, h3, h4 {
 /* Main content */
 main {
     max-width: 900px;
-    margin-top: calc(var(--space-xl) + 4rem); /* to account for sticky header + some spacing */
+    margin-top: calc(var(--space-xl) + 5rem); /* to account for sticky header + some spacing */
     margin-bottom: var(--space-lg);
     padding: var(--space-md);
     animation: fadeIn 1s ease;
@@ -385,6 +385,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

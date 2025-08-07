@@ -4,9 +4,9 @@
     --background-medium: #E8E1DB; /* soft beige */
 
     /* Header & Footer */
-    --header-bg: rgba(233, 223, 215, 0.9); /* semi-transparent warm sand */
-    --header-bg-shrink: rgba(233, 223, 215, 0.95);
-    --footer-bg: #F9F6F2;
+    --header-bg: var(--background-medium); 
+    --header-bg-shrink: var(--background-medium);
+    --footer-bg: var(--background-light);
     --header-shadow: 0 4px 12px rgba(110, 97, 89, 0.2);
 
     /* Text */
@@ -364,6 +364,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

@@ -184,14 +184,14 @@ h1, h2, h3, h4 {
 
 /* Collapse container list styling */
 .collapse ul {
-  margin: 0;
+  /*margin: 0;*/
   list-style-position: inside;
 }
 
 /* Base collapse style - hidden by default */
 .collapse {
-  padding: 0;
-  margin: 0;
+  /*padding: 0;
+  margin: 0;*/
   max-height: 0;
   overflow: hidden;
   opacity: 0;
@@ -367,6 +367,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

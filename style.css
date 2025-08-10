@@ -170,12 +170,19 @@ section:hover {
 }
 
 .profile-pic {
-  width: 180px;
   height: auto; /* keep aspect ratio */
-  border-radius: 1rem; /* 🆕 round edges instead of circle */
+  border-radius: 0.5rem; /* 🆕 round edges instead of circle */
   object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  flex-shrink: 0;
+  /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);*/
+  flex-shrink: 1;
+}
+
+.pic {
+  height: auto; /* keep aspect ratio */
+  border-radius: 0.5rem; /* 🆕 round edges instead of circle */
+  object-fit: cover;
+  /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);*/
+  flex-shrink: 1;
 }
 
 .about-content {
@@ -362,3 +369,4 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+

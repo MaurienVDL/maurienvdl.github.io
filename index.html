@@ -107,7 +107,7 @@
           </div>
            
           <!-- SKILLS -->
-         <div class="skills-column">
+          <div class="skills-column">
           <h3>Skills</h3>
           <aside class="skills-row">
             <!-- Coding Skills -->
@@ -145,22 +145,41 @@
 
            <a href="cv.pdf" class="btn" download>Download CV (PDF)</a>
         </section>
-
-
         
-         <!--<section id="projects">
+         <section id="projects">
             <h2>Projects</h2>
             <div class="project">
-                <h3>Project 1</h3>
+                <h3>Bachelor Project</h3>
                 <p>Short description of your project goes here.</p>
                 <a href="#">View Project</a>
             </div>
             <div class="project">
-                <h3>Project 2</h3>
-                <p>Short description of your project goes here.</p>
+                <h3>First Master Project</h3>
+                <p> Solar Radio Bursts (SRBs) are the associated radio emissions of solar flares, often characterized by a high intensity and observed as complex patterns in dynamic 
+                    spectral images. Based on those patterns, five spectral types can be distinguished; spectral types I to V. 
+                    Each spectral type has its own emission mechanism which relates them to space weather on Earth, making the task of real-time detection and classification valuable.
+                    Type-II's are in particular interesting due to their greatly varying time structures and relatively rare occurrence, making this type a challenge to accurately classify. 
+                    
+                    With data from DISTURB, located at the site of the WRIT, Dwingeloo, The Netherlands, 73 type-II's were identified from October 2023 to March 2023. 
+                    Along the type-II's 685 individual type-III's, 337 type-III clusters and 29 type-V's were identified and used to train a YOLO model.
+
+                    The YOLO series popped up in papers as "state of the art" algorithm. Its latest version (from late 2023), version 8, didn't disappoint. 
+                    Compared were the YOLO-v8 Nano, Small, Medium, and Large model versions. Found was the Nano version to be the best for type-II's and good for type-III's 
+                    and type-V's.
+
+                    Trained is a final YOLO-v8 Nano model that accurately classifies type-II's, individual type-III's and type-III clusters with MAP-scores at the IoU threshold of 0.5 
+                    of 0.890, 0.890 and 0.837 respectively and type-V's of 0.304. The optimal precision scores of the classes are 0.94, 0.90, 0.88 and 0.25 for the classes. 
+                    With the final model, type-II's can be detected with high accuracy within minutes after the start of the burst. Making real life detection and classification 
+                    possible.
+                </p>
                 <a href="#">View Project</a>
             </div>
-        </section> -->
+            <div class="project">
+                <h3>Second Master Project</h3>
+                <p>Short description of your project goes here.</p>
+                <a href="#">View Project</a>
+            </div>   
+        </section>
 
         <section id="contact">
             <h2>Contact</h2>
@@ -185,6 +204,7 @@
 
 </body>
 </html>
+
 
 
 

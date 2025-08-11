@@ -163,7 +163,7 @@ section:hover {
 .about-container {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
   max-width: 800px;
   margin: 0 auto;
   flex-wrap: wrap; /* stack on small screens */
@@ -241,9 +241,10 @@ section:hover {
   background-color: transparent;
   color: var(--accent-color-light);
   border: 1px solid var(--accent-color-light);
-  margin-top: var(--space-xs);
+  padding: var(--space-xs) var(--space-sm);
+  /*margin-top: var(--space-xs);
   margin-bottom: var(--space-sm);
-  margin: 0.5em 0;
+  margin: 0.5em 0;*/
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.75rem;
@@ -284,8 +285,6 @@ section:hover {
 
 .skill span {
   display: block;
-  /*font-size: 0.9rem;
-  margin-bottom: 0.2rem;*/
   color: var(--text-color);
 }
 
@@ -327,7 +326,7 @@ footer {
     padding: var(--space-md);
     background: var(--footer-bg);
     color: var(--text-color);
-    font-size: 0.9rem;
+    font-size: 0.75rem;
 }
 
 /* Social Bar */
@@ -369,6 +368,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

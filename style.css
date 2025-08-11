@@ -27,11 +27,19 @@
 
     /* Spacing */
     --space-xs: 0.25rem;  /* 4px */
+    --space-s: 0.75rem;   /* 6px */
     --space-sm: 0.5rem;   /* 8px */
     --space-md: 1rem;     /* 16px */
     --space-lg: 1.5rem;   /* 24px */
     --space-xl: 2rem;     /* 32px */
 
+    /* Fonts */
+    --font-xs: 0.25rem;  /* 4px */
+    --font-s: 0.75rem;   /* 12px */
+    --font-sm: 1rem;     /* 16px */
+    --font-md: 1.5rem;   /* 24px */
+    --font-lg: 2rem;     /* 36px */
+    --font-xl: 3rem;     /* 54px */
 }
 
 /* Global styles */
@@ -48,7 +56,7 @@ body {
 main section {
   max-width: 900px;       /* or whatever width you prefer */
   margin: 1rem auto;      /* centers horizontally and adds vertical spacing */
-  padding: 1rem 1.5rem;   /* some padding inside */
+  padding: 1.5rem 1.5rem; /* some padding inside */
   box-sizing: border-box; /* makes padding not add to width */
 }
 
@@ -368,6 +376,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

@@ -281,10 +281,10 @@ section:hover {
 }
 
 .skill-category h4 {
-  margin-bottom: 0.8rem;
-  font-size: var(font-xs);
+  margin-bottom: 0.75rem;
+  font-size: var(font-sm);
   border-bottom: 1px solid var(--accent-color);
-  padding-bottom: 0.3rem;
+  /*padding-bottom: 0.3rem;*/
 }
 
 .skill {
@@ -376,6 +376,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

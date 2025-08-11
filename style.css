@@ -88,6 +88,7 @@ h1, h2, h3, h4 {
 #site-header.shrink {
     padding: 0rem var(--space-xs); 
     background: var(--header-bg-shrink);
+    gap: 1rem;
 }
 
 #site-header nav a {
@@ -376,6 +377,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

@@ -231,7 +231,7 @@ section:hover {
 
 /* Shown state */
 .collapse.show {
-  /* max-height: 500px;*/ /* ⚠️ Works if you know the height; JS can help with auto */
+  max-height: 700px; /* ⚠️ Works if you know the height; JS can help with auto */
   opacity: 1;
   visibility: visible;
 }
@@ -369,5 +369,6 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 

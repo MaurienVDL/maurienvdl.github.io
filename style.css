@@ -174,6 +174,7 @@ section:hover {
 }
 
 .profile-pic {    
+  flex: 0 1 150px;
   height: auto; /* keep aspect ratio */
   border-radius: 6px; /* 🆕 round edges instead of circle */
   object-fit: cover;
@@ -188,7 +189,7 @@ section:hover {
 }
 
 .about-content {
-  flex: 1; /* allow text to take up remaining space */
+  flex: 1 1 300px; /* allow text to take up remaining space */
 }
 
 .about-content h2 {
@@ -370,6 +371,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

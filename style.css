@@ -179,18 +179,18 @@ section:hover {
 }
 
 .profile-pic {
+  float: left;   /* Float image to the left */
   height: auto; /* keep aspect ratio */
   border-radius: 6px; /* 🆕 round edges instead of circle */
   object-fit: cover;
-  /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);*/
   flex-shrink: 1;
 }
 
 .pic {
+  float: right;   /* Float image to the left */
   height: auto; /* keep aspect ratio */
   border-radius: 6px; /* 🆕 round edges instead of circle */
   object-fit: cover;
-  /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);*/
   flex-shrink: 1;
 }
 
@@ -377,6 +377,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

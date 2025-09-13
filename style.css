@@ -167,13 +167,14 @@ section:hover {
 
 .about-container {
   display: flex;
-  align-items: flex-start;  /*was center */
+  align-items: center;  /*was center */
   gap: 1.5rem;
   margin: 0 auto;
   flex-wrap: wrap; /* stack on small screens */
 }
 
-.profile-pic {
+.profile-pic {    
+  align-items: center;  /*was center */
   height: auto; /* keep aspect ratio */
   border-radius: 6px; /* 🆕 round edges instead of circle */
   object-fit: cover;
@@ -370,6 +371,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

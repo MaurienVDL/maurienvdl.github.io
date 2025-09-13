@@ -88,8 +88,7 @@ h4 {
 }
 
 ul {
-    list-style-type: none; /* No bullets */
-    padding: 0;            /* Remove padding */
+    padding: 1rem;           
     margin: 0;             /* Remove margin */
     list-style-position: inside;
 }
@@ -383,6 +382,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

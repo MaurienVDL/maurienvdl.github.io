@@ -60,7 +60,7 @@ main section {
 }
 
 h1, h2, h3, h4 {
-  margin-top: 0; /*var(--space-md)*/
+  margin-top: var(--space-md);
   margin-bottom: var(--space-sm);
   color: var(--accent-color);
 }
@@ -192,10 +192,10 @@ section:hover {
   flex: 1 1 auto; /* allow text to take up remaining space */
 }
 
- .about-content h2 {
+.about-content h2 {
   font-size: 2rem;
-  /*margin-bottom: 0.5rem;/*
-} 
+  margin-bottom: 0.5rem;
+}
 
 .about-content p {
   font-size: var(--font-sm);
@@ -277,7 +277,7 @@ section:hover {
 }
 
 .skill-category h4 {
-  /*margin-bottom: 0.5rem;*/
+  margin-bottom: 0.5rem;
   font-size: var(font-sm);
   border-bottom: 1px solid var(--accent-color);
   /*padding-bottom: 0.3rem;*/
@@ -367,7 +367,6 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
-
 
 
 

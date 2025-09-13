@@ -188,10 +188,10 @@ section:hover {
 }
 
 .about-container {
-    display: block;
+    display: flex;
     align-items: center; 
     gap: 1.5rem;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     flex-wrap: wrap; /* stack on small screens */
     }
 
@@ -215,8 +215,8 @@ section:hover {
 }
 
 .about-content {
-    display: flex;
-    flex: 1 1 auto; /* allow text to take up remaining space */
+    display: block;
+    /*flex: 1 1 auto;*/ /* allow text to take up remaining space */
 }
 
 .cv-group {
@@ -373,4 +373,5 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 

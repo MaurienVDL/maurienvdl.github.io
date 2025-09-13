@@ -88,25 +88,16 @@ h4 {
 }
 
 ul {
-  list-style-type: none; /* No bullets */
-  padding: 0;            /* Remove padding */
-  margin: 0;             /* Remove margin */
-  list-style-position: inside;
+    list-style-type: none; /* No bullets */
+    padding: 0;            /* Remove padding */
+    margin: 0;             /* Remove margin */
+    list-style-position: inside;
 }
 
 ul li {
     padding-left: 1.5rem; 
-  font-size: var(--font-sm);
-  color: #555;
-  /*line-height: 1.6;*/
-}
-
-ul li::before {
-  content: "-";          /* Dot as bullet */
-  position: absolute;
-  left: 0;
-  color: var(--text-color);    
-  font-weight: bold;
+    font-size: var(--font-sm);
+    color: var(--text-color);
 }
 
 /* Header */
@@ -384,6 +375,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

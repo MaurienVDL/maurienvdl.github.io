@@ -182,6 +182,7 @@ section:hover {
 }
 
 .pic {
+  flex: 0 1 auto;
   height: auto; /* keep aspect ratio */
   max-width: 100%;
   border-radius: 6px; /* 🆕 round edges instead of circle */
@@ -366,6 +367,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

@@ -187,33 +187,35 @@ section:hover {
 }
 
 .about-container {
-  display: flex;
-  align-items: center; 
-  gap: 1.5rem;
-  margin: 0 auto;
-  flex-wrap: wrap; /* stack on small screens */
-}
+    display: block;
+    align-items: center; 
+    gap: 1.5rem;
+    margin: 0 auto;
+    flex-wrap: wrap; /* stack on small screens */
+    }
 
-.profile-pic {    
-  flex: 0 1 auto;
-  height: auto; /* keep aspect ratio */
-  max-width: 100%; 
-  border-radius: 6px; /* round edges instead of circle */
-  object-fit: cover;
-  flex-shrink: 1;
-}
+.profile-pic {   
+    display: flex;
+    flex: 0 1 auto;
+    height: auto; /* keep aspect ratio */
+    max-width: 100%; 
+    border-radius: 6px; /* round edges instead of circle */
+    object-fit: cover;
+    flex-shrink: 1;
+    }
 
 .pic {
   flex: 0 1 auto;
   height: auto; /* keep aspect ratio */
   max-width: 100%;
-  border-radius: 6px; /* 🆕 round edges instead of circle */
+  border-radius: 6px; /* round edges instead of circle */
   object-fit: cover;
   flex-shrink: 1;
 }
 
 .about-content {
-  flex: 1 1 auto; /* allow text to take up remaining space */
+    display: flex;
+    flex: 1 1 auto; /* allow text to take up remaining space */
 }
 
 .cv-group {
@@ -276,11 +278,6 @@ section:hover {
   max-width: 30%;
 }
 
-.skills-column {
-  /*display: flex;*/
-  /*flex-direction: column;*/
-}
-
 .skill-category {
   margin-bottom: 0.5rem;
   flex: 1 1 45%;
@@ -288,9 +285,7 @@ section:hover {
 }
 
 .skill-category h4 {
-  /*margin-bottom: 0.5rem;*/
   border-bottom: 1px solid var(--accent-color);
-  /*padding-bottom: 0.3rem;*/
 }
 
 .skill {
@@ -377,6 +372,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

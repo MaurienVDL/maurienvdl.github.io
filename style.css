@@ -166,7 +166,7 @@ section:hover {
 }
 
 .about-container {
-  /*display: flex;*/
+  display: inline;
   /* align-items: center;*/  /*was center */
   gap: 1.5rem;
   margin: 0 auto;
@@ -189,6 +189,7 @@ section:hover {
 }
 
 .about-content {
+  display: inline;
   flex: 1; /* allow text to take up remaining space */
 }
 
@@ -371,6 +372,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

@@ -27,7 +27,6 @@
 
     /* Spacing */
     --space-xs: 0.25rem;  /* 4px */
-    --space-s: 0.75rem;   /* 6px */
     --space-sm: 0.5rem;   /* 8px */
     --space-md: 1rem;     /* 16px */
     --space-lg: 2.5rem;   /* 24px */
@@ -273,18 +272,18 @@ section:hover {
 }
 
 .skill-category {
-  /*margin-bottom: 1.5rem;*/
+  margin-bottom: 0.5rem;
 }
 
 .skill-category h4 {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   font-size: var(font-sm);
   border-bottom: 1px solid var(--accent-color);
   /*padding-bottom: 0.3rem;*/
 }
 
 .skill {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .skill span {
@@ -372,6 +371,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

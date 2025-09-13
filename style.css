@@ -174,7 +174,6 @@ section:hover {
 }
 
 .profile-pic {
-  float: right;   /* Float image to the left */
   height: auto; /* keep aspect ratio */
   border-radius: 6px; /* 🆕 round edges instead of circle */
   object-fit: cover;
@@ -371,6 +370,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

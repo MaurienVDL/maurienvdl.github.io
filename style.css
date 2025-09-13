@@ -171,7 +171,6 @@ section:hover {
   gap: 1.5rem;
   margin: 0 auto;
   flex-wrap: wrap; /* stack on small screens */
-  flex-direction: column; /* stack items vertically */
 }
 
 .profile-pic {
@@ -372,6 +371,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

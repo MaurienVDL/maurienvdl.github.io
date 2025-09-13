@@ -189,11 +189,10 @@ section:hover {
 
 .about-container {
     display: flex;
-    align-items: center; 
     gap: 1.5rem;
-    /*margin: 0 auto;*/
     flex-wrap: wrap; /* stack on small screens */
     }
+
 
 .profile-pic {   
     display: flex;
@@ -215,8 +214,8 @@ section:hover {
 }
 
 .about-content {
-    display: block;
-    /*flex: 1 1 auto;*/ /* allow text to take up remaining space */
+    flex: 1 1 100%;
+    min-width: 200px;
 }
 
 .cv-group {
@@ -373,5 +372,6 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 

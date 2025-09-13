@@ -102,7 +102,7 @@ ul li {
 
 ul li::before {
     content: "-";        /* What will appear before the li text */
-    color: var(--accent-color);         /* Color of the bullet */
+    color: var(--accent-color-light);         /* Color of the bullet */
     display: inline-block; 
     width: 1rem;         /* Space reserved for the bullet */
     margin-left: -1.5rem;/* Adjust position to align with text */
@@ -383,6 +383,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

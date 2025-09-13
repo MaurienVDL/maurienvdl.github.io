@@ -188,20 +188,18 @@ section:hover {
 }
 
 .about-container {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap; /* stack on small screens */
-    }
-
+  display: flex;
+  align-items: center;   /* keep image and text aligned vertically */
+  gap: 1.5rem;
+  flex-wrap: wrap;       /* stack on small screens */
+}
 
 .profile-pic {   
-    display: flex;
-    flex: 0 1 auto;
+    flex: 0 0 150px;
     height: auto; /* keep aspect ratio */
     max-width: 100%; 
     border-radius: 6px; /* round edges instead of circle */
     object-fit: cover;
-    flex-shrink: 1;
     }
 
 .pic {
@@ -214,7 +212,7 @@ section:hover {
 }
 
 .about-content {
-    flex: 1 1 100%;
+    flex: 1;
     min-width: 200px;
 }
 
@@ -372,6 +370,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

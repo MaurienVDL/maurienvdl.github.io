@@ -60,7 +60,7 @@ main section {
 }
 
 h1, h2, h3, h4 {
-  margin-top: var(--space-md);
+  margin-top: 0;
   margin-bottom: var(--space-sm);
   color: var(--accent-color);
 }
@@ -367,6 +367,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

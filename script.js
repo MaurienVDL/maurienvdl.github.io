@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (banner && about) {
       const bannerHeight = banner.offsetHeight; // current height in px
-      about.style.marginTop = bannerHeight + "px";
+      about.style.paddingTop = bannerHeight + "px";
     }
   }
 

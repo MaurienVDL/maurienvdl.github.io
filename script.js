@@ -70,5 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Run again if window is resized (e.g., responsive banner height)
   window.addEventListener("resize", adjustAboutOffset);
+
+   // 🔥 React to banner size changes automatically
+  const banner = document.getElementById("site-header");
+  if (banner) {
+    const resizeObserver = new ResizeObserver(adjustAboutOffset);
+    resizeObserver.observe(banner);
+  }
   
 });

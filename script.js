@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const marginBottom = parseInt(bannerStyles.marginBottom, 10);
   
       const bannerHeightWithMargins =
-        banner.offsetHeight + marginTop + marginBottom;
+        banner.offsetHeight + marginBottom;
   
       about.style.marginTop = bannerHeightWithMargins + "px";
     }

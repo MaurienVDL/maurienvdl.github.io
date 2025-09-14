@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function adjustAboutOffset() {
     const banner = document.getElementById("site-header");
     const about = document.querySelector(".about-section");
-
+  
     if (banner && about) {
       const bannerStyles = getComputedStyle(banner);
       const marginTop = parseInt(bannerStyles.marginTop, 10);
@@ -71,4 +71,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const resizeObserver = new ResizeObserver(adjustAboutOffset);
     resizeObserver.observe(banner);
   }
+
+  function adjustAboutOffset() {
+  const banner = document.getElementById("site-header");
+  const about = document.querySelector(".about-section");
+  
+  // Run again when header is fetched and injected
+  fetch('header.html')
+    .then(r => r.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+      adjustAboutOffset(); // <-- recalc placement here
+  });
+
 });

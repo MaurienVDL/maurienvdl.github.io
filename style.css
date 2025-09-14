@@ -197,7 +197,7 @@ figure {
 /* Main content */
 main {
     /*max-width: 900px;*/
-    margin: 7rem auto 2rem auto; /* top margin for sticky header */
+    margin: 0 auto 2rem auto; /* top margin for sticky header */
     padding:  var(--space-sm);
     animation: fadeIn 1s ease;
 }
@@ -394,6 +394,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

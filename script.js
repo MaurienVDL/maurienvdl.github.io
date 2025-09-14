@@ -61,13 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
      if (banner && about) {
       const bannerStyles = getComputedStyle(banner);
-      const marginTop = parseInt(bannerStyles.marginTop, 10);
-      const marginBottom = parseInt(bannerStyles.marginBottom, 10);
+      const marginTop = parseFloat(bannerStyles.marginTop) || 0;
+      const marginBottom = parseFloat(bannerStyles.marginBottom) || 0;
   
       const bannerHeightWithMargins =
         banner.offsetHeight + marginTop + marginBottom;
-  
-      about.style.marginTop = bannerHeightWithMargins + "px";
+
+      about.style.setProperty("--banner-offset", bannerHeightWithMargins + "px");
     }
   }
 

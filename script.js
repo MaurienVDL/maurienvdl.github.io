@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function adjustAboutOffset() {
     const banner = document.getElementById("site-header");
-    const about = document.querySelector(".about-section");
+    const about = document.querySelector(".about-container");
 
     if (banner && about) {
       const bannerHeight = banner.offsetHeight; // current height in px

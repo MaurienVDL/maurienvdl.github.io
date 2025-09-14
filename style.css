@@ -61,7 +61,7 @@ main section {
 
 h1, h2, h3, h4 {
   margin-top: 0;
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
   color: var(--accent-color);
 }
 
@@ -70,7 +70,7 @@ p {
   color: var(--text-color);
   /*line-height: 1.6;*/
     margin-top: 0;
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-md);
 }
 
 h1 {
@@ -386,6 +386,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

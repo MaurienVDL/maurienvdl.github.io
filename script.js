@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function adjustAboutOffset() {
     const banner = document.getElementById("site-header");
-    const about = document.querySelector(".about-section");
+    const about = document.querySelector("main");
 
      if (banner && about) {
       const bannerStyles = getComputedStyle(banner);
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const marginBottom = parseInt(bannerStyles.marginBottom, 10);
   
       const bannerHeightWithMargins =
-        banner.offsetHeight + marginBottom;
+        banner.offsetHeight + marginTop + marginBottom;
   
       about.style.marginTop = bannerHeightWithMargins + "px";
     }

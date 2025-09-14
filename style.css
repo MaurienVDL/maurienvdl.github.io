@@ -237,7 +237,7 @@ section:hover {
 }
 
 .cv-group {
-  margin-top: var(--space-md);
+  /*margin-top: var(--space-md);*/
   margin-bottom: var(--space-md);
   padding: 0;
 }
@@ -384,6 +384,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

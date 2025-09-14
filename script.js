@@ -59,9 +59,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const banner = document.getElementById("site-header");
     const about = document.querySelector(".about-section");
 
-    if (banner && about) {
-      const bannerHeight = banner.offsetHeight; // current height in px
-      about.style.marginTop = bannerHeight + "px";
+     if (banner && about) {
+      const bannerStyles = getComputedStyle(banner);
+      const marginTop = parseInt(bannerStyles.marginTop, 10);
+      const marginBottom = parseInt(bannerStyles.marginBottom, 10);
+  
+      const bannerHeightWithMargins =
+        banner.offsetHeight + marginTop + marginBottom;
+  
+      about.style.marginTop = bannerHeightWithMargins + "px";
     }
   }
 

@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  //
-  // ✅ Load Header
-  //
+  // ✅ Header laden
   fetch('header.html')
     .then(response => response.text())
     .then(data => {
@@ -9,9 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(err => console.error("Header load failed:", err));
 
-  //
-  // ✅ Load Footer
-  //
+  // ✅ Footer laden
   fetch('footer.html')
     .then(response => response.text())
     .then(data => {
@@ -19,9 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(err => console.error("Footer load failed:", err));
 
-  //
-  // ✅ Show more / Show less buttons
-  //
+  // ✅ Show more / Show less knoppen
   document.querySelectorAll('.toggle-btn').forEach(button => {
     button.addEventListener('click', () => {
       const cvGroup = button.closest('.cv-group');
@@ -34,53 +28,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  //
   // ✅ Skill bar animation
-  //
   document.querySelectorAll('.skill-level').forEach(el => {
-    const width = el.style.width; // save original width
-    el.style.width = '0'; // start from zero
+    const width = el.style.width;
+    el.style.width = '0';
     setTimeout(() => {
-      el.style.width = width; // animate to final width
+      el.style.width = width;
     }, 100);
   });
 
-  //
-  // ✅ Scroll-effect for header (with throttle)
-  //
-  function throttle(fn, limit) {
-    let inThrottle;
-    return function (...args) {
-      if (!inThrottle) {
-        fn.apply(this, args);
-        inThrottle = true;
-        setTimeout(() => (inThrottle = false), limit);
-      }
-    };
-  }
+  // ✅ Scroll-effect voor header
+  window.addEventListener('scroll', () => {
+    const header = document.getElementById('site-header');
+    if (!header) return;
 
-  window.addEventListener(
-    'scroll',
-    throttle(() => {
-      const header = document.getElementById('site-header');
-      if (!header) return;
+    header.classList.toggle('shrink', window.scrollY > 50);
+    header.classList.toggle('scrolled', window.scrollY > 20);
+  });
 
-      header.classList.toggle('shrink', window.scrollY > 50);
-      header.classList.toggle('scrolled', window.scrollY > 20);
-    }, 100) // update at most every 100ms
-  );
-
-  //
-  // ✅ Adjust "About" offset (with margins + ResizeObserver)
-  //
+  // ✅ Adjust about offset
   function adjustAboutOffset() {
     const banner = document.getElementById("site-header");
     const about = document.querySelector(".about-section");
 
     if (banner && about) {
       const bannerStyles = getComputedStyle(banner);
-      const marginTop = parseInt(bannerStyles.marginTop, 10) || 0;
-      const marginBottom = parseInt(bannerStyles.marginBottom, 10) || 0;
+      const marginTop = parseInt(bannerStyles.marginTop, 10);
+      const marginBottom = parseInt(bannerStyles.marginBottom, 10);
 
       const bannerHeightWithMargins =
         banner.offsetHeight + marginTop + marginBottom;

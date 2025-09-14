@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   function adjustAboutOffset() {
-    const banner = document.getElementById("header");
+    const banner = document.getElementById("site-header");
     const about = document.querySelector(".about-container");
 
     if (banner && about) {

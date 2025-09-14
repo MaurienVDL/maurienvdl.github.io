@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const marginBottom = parseFloat(bannerStyles.marginBottom) || 0;
   
       const bannerHeightWithMargins =
-        banner.offsetHeight;
+        banner.offsetHeight - 1.5rem;
 
       about.style.setProperty("--banner-offset", bannerHeightWithMargins + "px");
     }

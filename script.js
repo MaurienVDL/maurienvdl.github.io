@@ -27,8 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  
-
   // ✅ Scroll-effect voor header
   window.addEventListener('scroll', () => {
     const header = document.getElementById('site-header');
@@ -57,5 +55,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  function adjustAboutOffset() {
+    const banner = document.getElementById("banner");
+    const about = document.querySelector(".about-container");
+
+    if (banner && about) {
+      const bannerHeight = banner.offsetHeight; // current height in px
+      about.style.marginTop = bannerHeight + "px";
+    }
+  }
+
+  // Run on page load
+  window.addEventListener("load", adjustAboutOffset);
+
+  // Run again if window is resized (e.g., responsive banner height)
+  window.addEventListener("resize", adjustAboutOffset);
   
 });

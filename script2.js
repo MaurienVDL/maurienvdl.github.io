@@ -75,13 +75,5 @@ document.addEventListener('DOMContentLoaded', () => {
   function adjustAboutOffset() {
   const banner = document.getElementById("site-header");
   const about = document.querySelector(".about-section");
-  
-  // Run again when header is fetched and injected
-  fetch('header.html')
-    .then(r => r.text())
-    .then(data => {
-      document.getElementById('header').innerHTML = data;
-      adjustAboutOffset(); // <-- recalc placement here
-  });
 
 });

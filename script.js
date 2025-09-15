@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Inject the header
     document.getElementById("site-header").innerHTML = `
       <nav>
-        <a href="/">Home</a>
+        <a href="/" id="home-link">Home</a>
         <a href="#about">About</a>
         <a href="#cv">Curriculum Vitae</a>
         <a href="#projects">Projects</a>
@@ -96,6 +96,11 @@ document.addEventListener('DOMContentLoaded', () => {
       resizeObserver.observe(banner);
     }
   });
-  
+
+  // Smooth scroll to top without reloading
+  document.getElementById("home-link").addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
   
 });

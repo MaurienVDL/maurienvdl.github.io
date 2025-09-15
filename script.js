@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(response => response.text())
     .then(data => {
       document.getElementById('footer').innerHTML = data;
-    });
+    }); 
 
   // ✅ Show more / Show less knoppen
   document.querySelectorAll('.toggle-btn').forEach(button => {

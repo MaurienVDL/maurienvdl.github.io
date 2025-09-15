@@ -59,29 +59,43 @@ document.addEventListener('DOMContentLoaded', () => {
     const banner = document.getElementById("site-header");
     const about = document.querySelector("main");
 
-     if (banner && about) {
+    if (banner && about) {
       const bannerStyles = getComputedStyle(banner);
       const marginTop = parseFloat(bannerStyles.marginTop) || 0;
       const marginBottom = parseFloat(bannerStyles.marginBottom) || 0;
-  
+
       const bannerHeightWithMargins =
-        banner.offsetHeight - marginTop;
+        banner.offsetHeight + marginTop + marginBottom;
 
       about.style.setProperty("--banner-offset", bannerHeightWithMargins + "px");
     }
   }
 
-  // Run on page load
-  window.addEventListener("load", adjustAboutOffset);
+  document.addEventListener("DOMContentLoaded", () => {
+    // 1. Inject the header
+    document.getElementById("site-header").innerHTML = `
+      <nav>
+        <a href="/">Home</a>
+        <a href="#about">About</a>
+        <a href="#cv">Curriculum Vitae</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    `;
 
-  // Run again if window is resized (e.g., responsive banner height)
-  window.addEventListener("resize", adjustAboutOffset);
+    // 2. Now that header exists, run the offset adjustment
+    adjustAboutOffset();
 
-   // 🔥 React to banner size changes automatically
-  const banner = document.getElementById("site-header");
-  if (banner) {
-    const resizeObserver = new ResizeObserver(adjustAboutOffset);
-    resizeObserver.observe(banner);
-  }
+    // 3. Re-run if window is resized
+    window.addEventListener("resize", adjustAboutOffset);
+
+    // 4. Re-run if header size/content changes
+    const banner = document.getElementById("site-header");
+    if (banner) {
+      const resizeObserver = new ResizeObserver(adjustAboutOffset);
+      resizeObserver.observe(banner);
+    }
+  });
+  
   
 });

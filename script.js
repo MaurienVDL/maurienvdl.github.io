@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Run on page load
-  window.addEventListener("load", adjustAboutOffset);
+  window.addEventListener("DOMContentLoaded", adjustAboutOffset);
 
   // Run again if window is resized (e.g., responsive banner height)
   window.addEventListener("resize", adjustAboutOffset);

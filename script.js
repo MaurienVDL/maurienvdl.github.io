@@ -60,14 +60,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const about = document.querySelector("main");
 
     if (banner && about) {
-      const bannerStyles = getComputedStyle(banner);
-      const paddingTop = parseFloat(bannerStyles.paddingTop) || 0;
-      const paddingBottom = parseFloat(bannerStyles.paddingBottom) || 0;
+      //const bannerStyles = getComputedStyle(banner);
+      //const paddingTop = parseFloat(bannerStyles.paddingTop) || 0;
+      //const paddingBottom = parseFloat(bannerStyles.paddingBottom) || 0;
 
-      const bannerHeightWithMargins =
-        banner.offsetHeight - paddingTop;
+      const bannerHeight =
+        banner.offsetHeight;
 
-      about.style.setProperty("--banner-offset", bannerHeightWithMargins + "px");
+      about.style.setProperty("--banner-offset", bannerHeight + "px");
     }
   }
 

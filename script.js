@@ -84,8 +84,9 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
 
     // 2. Now that header exists, run the offset adjustment
-    adjustAboutOffset();
-
+    //adjustAboutOffset();
+    window.addEventListener("load", adjustAboutOffset);
+    
     // 3. Re-run if window is resized
     window.addEventListener("resize", adjustAboutOffset);
 

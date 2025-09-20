@@ -67,8 +67,10 @@ document.addEventListener('DOMContentLoaded', () => {
   function adjustAboutOffset() {
     const banner = document.getElementById("site-header");
     const about = document.querySelector("main");
+
     if (banner && about) {
-      const bannerHeight = banner.offsetHeight;
+      const bannerHeight = banner.getBoundingClientRect().height;
+      about.style.setProperty("--banner-offset", bannerHeight + "px");
       about.style.setProperty("--banner-offset", bannerHeight + "px");
     }
   }

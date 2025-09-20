@@ -69,8 +69,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const about = document.querySelector("main");
 
     if (banner && about) {
-      const bannerHeight = banner.getBoundingClientRect().height;
-      about.style.setProperty("--banner-offset", bannerHeight + "px");
+      const styles = getComputedStyle(banner);
+      const paddingTop = parseFloat(styles.paddingTop) || 0;
+      const bannerHeight = banner.getBoundingClientRect().height - paddingTop;
       about.style.setProperty("--banner-offset", bannerHeight + "px");
     }
   }

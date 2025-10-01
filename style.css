@@ -129,13 +129,13 @@ figure {
     transition: all 0.3s ease;
     z-index: 1000;
     box-shadow: var(--header-shadow);
-    gap: 0.5rem;
+    gap: 0rem; /*0.5*/
 }
 
 #site-header.shrink {
     padding: var(--space-sm) var(--space-md); 
     background: var(--header-bg-shrink);
-    gap: 0.5rem;
+    gap: 0rem;
 }
 
 #site-header nav a {
@@ -422,6 +422,7 @@ footer {
     }
 
 }
+
 
 
 

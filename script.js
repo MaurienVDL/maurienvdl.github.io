@@ -76,13 +76,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   
-  document.addEventListener("DOMContentLoaded", () => {
+   document.addEventListener("DOMContentLoaded", () => {
     const menuBtn = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav-menu");
+
     menuBtn.addEventListener("click", () => {
-      const nav = document.getElementById("nav-menu");
       nav.classList.toggle("show");
+      // Update aria-expanded for accessibility
+      const expanded = menuBtn.getAttribute("aria-expanded") === "true";
+      menuBtn.setAttribute("aria-expanded", !expanded);
+    });
   });
-});
 
 
 });

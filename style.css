@@ -409,7 +409,7 @@ footer {
     }
 
     #nav-menu {
-        display: flex;
+        display: none;
         flex-direction: column;
         gap: 0.5rem;
         width: 100%;
@@ -422,6 +422,7 @@ footer {
     }
 
 }
+
 
 
 

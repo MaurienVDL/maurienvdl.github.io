@@ -400,23 +400,28 @@ footer {
 }
 
 @media (max-width: 768px) {
-  #menu-toggle {
-    display: block;
-  }
+    #menu-toggle {
+        display: block;
+    }
+    #site-header {
+        display: flex;
+        flex-direction: column;
+    }
 
-  nav {
-    display: none;
-    flex-direction: column;
-    gap: 0.5rem;
-    width: 100%;
-    background: #f8f8f8;
-    padding: 1rem;
-  }
+    nav {
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        background: #f8f8f8;
+        padding: 1rem;
+    }
 
-  nav.show {
-    display: flex;
-  }
+    nav.show {
+        display: flex;
+    }
 }
+
 
 
 

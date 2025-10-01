@@ -343,11 +343,7 @@ section:hover {
 @media (max-width: 600px) {
   .skills-row {
     flex-direction: column;
-  } {
-  #menu-toggle {
-    display: block; /* show hamburger */
-  }
-    
+  }     
 }
 
 /* Footer */
@@ -414,6 +410,12 @@ footer {
   display: none; /* hidden by default */
 }
 
+/* On small screens */
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block; /* show hamburger */
+  }
+    
 nav {
     display: none; /* hide menu */
     flex-direction: column;
@@ -426,6 +428,7 @@ nav {
 nav.show {
     display: flex; /* show when toggled */
     }
+
 
 
 

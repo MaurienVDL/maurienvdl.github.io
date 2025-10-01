@@ -405,7 +405,7 @@ footer {
     }
     #site-header {
         display: flex;
-        flex-direction: column;
+        /*flex-direction: column;*/
     }
 
     #nav-menu {
@@ -422,6 +422,7 @@ footer {
     }
 
 }
+
 
 
 

@@ -75,4 +75,13 @@ document.addEventListener('DOMContentLoaded', () => {
       about.style.setProperty("--banner-offset", bannerHeight + "px");
     }
   }
+  
+  document.getElementById("menu-toggle").addEventListener("click", function () {
+    const nav = document.getElementById("nav-menu");
+    const expanded = this.getAttribute("aria-expanded") === "true" || false;
+  
+    this.setAttribute("aria-expanded", !expanded);
+    nav.classList.toggle("show");
+  });
+
 });

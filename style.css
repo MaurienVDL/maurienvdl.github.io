@@ -53,41 +53,29 @@ body {
 }
 
 main section {
-  max-width: 900px;       /* or whatever width you prefer */
-  margin: 1rem auto;      /* centers horizontally and adds vertical spacing */
-  padding: 2rem 2rem; /* some padding inside */
-  box-sizing: border-box; /* makes padding not add to width */
+    max-width: 900px;       /* or whatever width you prefer */
+    margin: 1rem auto;      /* centers horizontally and adds vertical spacing */
+    padding: 2rem 2rem; /* some padding inside */
+    box-sizing: border-box; /* makes padding not add to width */
 }
 
 h1, h2, h3, h4 {
-  margin-top: 0;
-  margin-bottom: var(--space-md);
-  color: var(--accent-color);
+    margin-top: 0;
+    margin-bottom: var(--space-md);
+    color: var(--accent-color);
 }
 
 p {
-  font-size: var(--font-sm);
-  color: var(--text-color);
-  /*line-height: 1.6;*/
+    font-size: var(--font-sm);
+    color: var(--text-color);
     margin-top: 0;
     margin-bottom: var(--space-md);
 }
 
-h1 {
-    font-size: var(font-xl);
-}
-
-h2 {
-    font-size: var(font-lg);
-}
-
-h3 {
-    font-size: var(font-md);
-}
-
-h4 {
-    font-size: var(font-sm);
-}
+h1 { font-size: var(--font-xl); }
+h2 { font-size: var(--font-lg); }
+h3 { font-size: var(--font-md); }
+h4 { font-size: var(--font-sm); }
 
 #site-header p,
 #site-header h1 {
@@ -117,11 +105,9 @@ ul li::before {
 
 figure {
     display: block;
-    margin-block-start: 1rem;
-    margin-block-end: 1rem;
-    margin-inline-start: 0rem;
-    margin-inline-end: 0rem;
-    }
+    margin-block: 1rem;
+    margin-inline: 0rem;
+}
 
 /* Header */
 #site-header {
@@ -252,7 +238,6 @@ section:hover {
 }
 
 .cv-group {
-  /*margin-top: var(--space-md);*/
   margin-bottom: var(--space-md);
   padding: 0;
 }
@@ -389,16 +374,19 @@ footer {
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-.social.linkedin:hover { background: var(--footer-bg); }
-.social.github:hover { background: var(--footer-bg); }
-.social.instagram:hover { background: var(--footer-bg); }
-.social[aria-label="Email"]:hover { background: var(--footer-bg); }
+.social.linkedin:hover,
+.social.github:hover,
+.social.instagram:hover,
+.social[aria-label="Email"]:hover {
+  background: var(--footer-bg);
+}
 
 /* Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 
 
 

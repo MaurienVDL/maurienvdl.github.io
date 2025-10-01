@@ -198,7 +198,7 @@ figure {
 main {
     /*max-width: 900px;*/
     margin: var(--banner-offset, 0) auto 2rem auto; /* top margin for sticky header */
-    padding:  var(--space-sm);
+    padding: 0 var(--space-sm);
     animation: fadeIn 1s ease;
 }
 
@@ -426,6 +426,7 @@ nav {
 nav.show {
     display: flex; /* show when toggled */
     }
+
 
 
 

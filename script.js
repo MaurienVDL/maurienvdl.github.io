@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     menuBtn.addEventListener("click", () => {
       nav.classList.toggle("show");
       // Update aria-expanded for accessibility
-      const expanded = menuBtn.getAttribute("aria-expanded") === "true";
+      const expanded = menuBtn.getAttribute("aria-expanded") == "true";
       menuBtn.setAttribute("aria-expanded", !expanded);
     });
   });

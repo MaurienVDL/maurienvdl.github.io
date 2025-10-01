@@ -158,6 +158,11 @@ figure {
   width: 100%;
 }
 
+#site-header p,
+#site-header h1 {
+  margin-bottom: 0; /* removes the space below */
+}
+
 /* Hero */
 .hero {
   height: 80vh;

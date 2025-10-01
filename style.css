@@ -408,7 +408,7 @@ footer {
         flex-direction: column;
     }
 
-    nav {
+    #nav-menu {
         display: none;
         flex-direction: column;
         gap: 0.5rem;
@@ -417,10 +417,12 @@ footer {
         padding: 1rem;
     }
 
-    nav.show {
+    #nav-menu.show {
         display: flex;
     }
+
 }
+
 
 
 

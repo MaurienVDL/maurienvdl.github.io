@@ -76,23 +76,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", function() {
     const menuBtn = document.getElementById("menu-toggle");
     const nav = document.getElementById("nav-menu");
   
-    console.log("menuBtn:", menuBtn); // DEBUG
-    console.log("nav:", nav);         // DEBUG
-  
-    if (menuBtn && nav) {
-      menuBtn.addEventListener("click", () => {
-        console.log("Button clicked!"); // DEBUG
-        nav.classList.toggle("show");
-        
-        // Update aria-expanded for accessibility
-        const expanded = menuBtn.getAttribute("aria-expanded") === "true";
-        menuBtn.setAttribute("aria-expanded", !expanded);
-      });
-    }
+    menuBtn.addEventListener("click", function() {
+      console.log("Button clicked!");
+      nav.classList.toggle("show");
+    });
+});
+
 });
 
 

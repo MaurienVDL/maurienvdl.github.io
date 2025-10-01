@@ -133,7 +133,7 @@ figure {
 }
 
 #site-header.shrink {
-    padding: 0rem var(--space-sm); 
+    padding: var(--space-sm); 
     background: var(--header-bg-shrink);
     gap: 0.5rem;
 }
@@ -422,6 +422,7 @@ footer {
     }
 
 }
+
 
 
 

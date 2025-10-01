@@ -33,7 +33,6 @@
     --space-xl: 2rem;     /* 32px */
 
     /* Fonts */
-    --font-xxs: 0.25rem;  /* 4px */
     --font-xs: 0.75rem;   /* 12px */
     --font-sm: 1rem;     /* 16px */
     --font-md: 1.5rem;   /* 24px */
@@ -422,6 +421,7 @@ footer {
         display: flex;
     }
 }
+
 
 
 

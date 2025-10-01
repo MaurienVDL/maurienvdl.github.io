@@ -410,7 +410,7 @@ footer {
 
     #nav-menu {
         display: none;
-        flex-direction: column;
+        flex-direction: row;
         gap: 0.5rem;
         width: 100%;
         background: var(--header-background);
@@ -422,6 +422,7 @@ footer {
     }
 
 }
+
 
 
 

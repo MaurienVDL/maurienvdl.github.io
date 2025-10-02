@@ -406,38 +406,20 @@ footer {
     #site-header {
         display: flex;
         /*flex-direction: column;*/
+        position: relative;
     }
 
     #nav-menu {
         display: none;
-        flex-direction: row;
-        gap: 0.5rem;
-        width: 100%;
+        position: absolute;
+        top: 100%; /* directly under header */
+        left: 0;
+        right: 0;
         background: var(--header-background);
-        padding: 1rem;
+        z-index: 1000;
     }
 
     #nav-menu.show {
-        display: flex;
+        display: block;
     }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

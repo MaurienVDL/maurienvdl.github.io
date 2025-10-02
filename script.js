@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(data => {
       document.getElementById('header').innerHTML = data;
 
-      // Attach smooth scroll to "Home" after header exists
+      // ✅ Attach "Home" smooth scroll after header loads
       const homeLink = document.getElementById("home-link");
       if (homeLink) {
         homeLink.addEventListener("click", (e) => {
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
 
-      // Run offset adjustment after header loads
+      // ✅ Run offset adjustment after header loads
       adjustAboutOffset();
       window.addEventListener("resize", adjustAboutOffset);
 
@@ -22,6 +22,20 @@ document.addEventListener('DOMContentLoaded', () => {
       if (banner) {
         const resizeObserver = new ResizeObserver(adjustAboutOffset);
         resizeObserver.observe(banner);
+      }
+
+      // ✅ Attach menu toggle after header is injected
+      const menuBtn = document.getElementById("menu-toggle");
+      const nav = document.getElementById("nav-menu");
+
+      if (menuBtn && nav) {
+        menuBtn.addEventListener("click", () => {
+          nav.classList.toggle("show");
+
+          // Update aria-expanded for accessibility
+          const expanded = menuBtn.getAttribute("aria-expanded") === "true";
+          menuBtn.setAttribute("aria-expanded", !expanded);
+        });
       }
     });
 
@@ -38,10 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const cvGroup = button.closest('.cv-group');
       const collapsible = cvGroup.querySelector('.collapse');
 
-      collapsible.classList.toggle('show');
-      button.textContent = collapsible.classList.contains('show')
-        ? 'Show less'
-        : 'Show more';
+      if (collapsible) {
+        collapsible.classList.toggle('show');
+        button.textContent = collapsible.classList.contains('show')
+          ? 'Show less'
+          : 'Show more';
+      }
     });
   });
 
@@ -75,17 +91,5 @@ document.addEventListener('DOMContentLoaded', () => {
       about.style.setProperty("--banner-offset", bannerHeight + "px");
     }
   }
-  
-  document.addEventListener("DOMContentLoaded", () => {
-    const menuBtn = document.getElementById("menu-toggle");
-    const nav = document.getElementById("nav-menu");
-
-    menuBtn.addEventListener("click", () => {
-      nav.classList.toggle("show");
-      // Update aria-expanded for accessibility
-      const expanded = menuBtn.getAttribute("aria-expanded") === "true";
-      menuBtn.setAttribute("aria-expanded", !expanded);
-    });
-  });
-
 });
+

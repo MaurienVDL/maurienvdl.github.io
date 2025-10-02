@@ -411,14 +411,12 @@ footer {
 
     #nav-menu {
         display: none;
-        position: absolute;
-        top: 100%; /* directly under header */
-        left: 1rem;
-        right: 0;
+        padding: 1rem;
     }
 
     #nav-menu.show {
         display: block;
     }
 }
+
 

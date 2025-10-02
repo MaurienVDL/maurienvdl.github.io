@@ -406,18 +406,19 @@ footer {
     #site-header {
         display: flex;
         /*flex-direction: column;*/
+        position: relative;
     }
 
     #nav-menu {
         display: none;
         position: absolute;
         top: 100%; /* directly under header */
-        left: 0;
+        left: 1rem;
         right: 0;
-        background: var(--header-background);
     }
 
     #nav-menu.show {
         display: block;
     }
 }
+

@@ -405,18 +405,16 @@ footer {
     }
     #site-header {
         display: flex;
-        /*flex-direction: column;*/
-        position: relative;
     }
 
     #nav-menu {
         display: none;
-        padding: 1rem;
     }
 
     #nav-menu.show {
-        display: block;
+        display: table-column;
     }
 }
+
 
 

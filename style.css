@@ -333,6 +333,24 @@ section:hover {
   flex-wrap: wrap;
 }
 
+.project-link {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.project-link .arrow {
+  transition: transform 0.2s;
+}
+
+.project-link:hover .arrow {
+  transform: translateX(3px); /* little move on hover */
+}
+
+
 @media (max-width: 600px) {
   .skills-row {
     flex-direction: column;
@@ -415,6 +433,7 @@ footer {
         display: table-column;
     }
 }
+
 
 
 

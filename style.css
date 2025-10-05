@@ -214,7 +214,7 @@ section:hover {
 .about-container {
     align-items: center;
     display: flex;
-    gap: 1.5rem;
+    gap: 0rem 1.5rem;
     flex-wrap: wrap;       /* stack on small screens */
     }
 
@@ -415,6 +415,7 @@ footer {
         display: table-column;
     }
 }
+
 
 
 

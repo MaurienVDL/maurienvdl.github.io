@@ -224,6 +224,7 @@ section:hover {
     max-width: 100%; 
     border-radius: 6px; /* round edges instead of circle */
     object-fit: cover;
+    margin-bottom: var(--space-md);
     }
 
 .pic {
@@ -457,6 +458,7 @@ footer {
       display: inline-block;
   }
 }
+
 
 
 

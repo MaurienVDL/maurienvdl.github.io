@@ -426,7 +426,7 @@ footer {
   #site-header {
       flex-direction: row;        /* logo + toggle stay side by side */
       align-items: center;
-      justify-content: space-between;
+      justify-content: right;
   }
 
   /* Nav styles */
@@ -451,6 +451,7 @@ footer {
       display: inline-block;
   }
 }
+
 
 
 

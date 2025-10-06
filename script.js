@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
 
-      // ✅ Run offset adjustment after header loads
+      // ✅ Adjust spacing after header loads
       adjustAboutOffset();
       window.addEventListener("resize", adjustAboutOffset);
 
@@ -25,84 +25,89 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // ✅ Attach menu toggle after header is injected
-      const menuBtn = document.getElementById("menu-toggle");
-      const nav = document.getElementById("nav-menu");
+      const menuToggle = document.getElementById("menu-toggle");
+      const navMenu = document.getElementById("nav-menu");
 
-      if (menuBtn && nav) {
-        menuBtn.addEventListener("click", () => {
-          nav.classList.toggle("show");
+      if (menuToggle && navMenu) {
+        // Toggle menu open/close
+        menuToggle.addEventListener("click", () => {
+          navMenu.classList.toggle("show");
 
           // Update aria-expanded for accessibility
-          const expanded = menuBtn.getAttribute("aria-expanded") === "true";
-          menuBtn.setAttribute("aria-expanded", !expanded);
+          const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+          menuToggle.setAttribute("aria-expanded", !expanded);
         });
-     
-        // Collapse the menu when any nav link is clicked
-        navMenu.querySelectorAll('a').forEach(link => {
-          link.addEventListener('click', () => {
-            navMenu.classList.remove('show');
+
+        // ✅ Collapse the menu when any nav link is clicked
+        navMenu.querySelectorAll("a").forEach(link => {
+          link.addEventListener("click", () => {
+            navMenu.classList.remove("show");
+            menuToggle.setAttribute("aria-expanded", "false");
           });
         });
+
+        // ✅ Collapse when clicking outside
+        document.addEventListener("click", (event) => {
+          if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+            navMenu.classList.remove("show");
+            menuToggle.setAttribute("aria-expanded", "false");
+          }
+        });
       }
-  
-  document.addEventListener('click', (event) => {
-    if (!nav.contains(event.target) && !menuToggle.contains(event.target)) {
-      navMenu.classList.remove('show');
-    }
-  });
 
+      // ✅ Load Footer
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer').innerHTML = data;
+        });
 
-  // ✅ Load Footer
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer').innerHTML = data;
-    });
+      // ✅ Show more / Show less buttons
+      document.querySelectorAll('.toggle-btn').forEach(button => {
+        button.addEventListener('click', () => {
+          const cvGroup = button.closest('.cv-group');
+          const collapsible = cvGroup.querySelector('.collapse');
 
-  // ✅ Show more / Show less buttons
-  document.querySelectorAll('.toggle-btn').forEach(button => {
-    button.addEventListener('click', () => {
-      const cvGroup = button.closest('.cv-group');
-      const collapsible = cvGroup.querySelector('.collapse');
+          if (collapsible) {
+            collapsible.classList.toggle('show');
+            button.textContent = collapsible.classList.contains('show')
+              ? 'Show less'
+              : 'Show more';
+          }
+        });
+      });
 
-      if (collapsible) {
-        collapsible.classList.toggle('show');
-        button.textContent = collapsible.classList.contains('show')
-          ? 'Show less'
-          : 'Show more';
+      // ✅ Scroll effect for header
+      window.addEventListener('scroll', () => {
+        const header = document.getElementById('site-header');
+        if (!header) return;
+
+        header.classList.toggle('shrink', window.scrollY > 50);
+        header.classList.toggle('scrolled', window.scrollY > 20);
+      });
+
+      // ✅ Animate skill bars
+      document.querySelectorAll('.skill-level').forEach(el => {
+        const width = el.style.width;
+        el.style.width = '0';
+        setTimeout(() => {
+          el.style.width = width;
+        }, 100);
+      });
+
+      // ✅ Function to adjust spacing for "About"
+      function adjustAboutOffset() {
+        const banner = document.getElementById("site-header");
+        const about = document.querySelector("main");
+
+        if (banner && about) {
+          const styles = getComputedStyle(banner);
+          const paddingTop = parseFloat(styles.paddingTop) || 0;
+          const bannerHeight = banner.getBoundingClientRect().height - paddingTop;
+          about.style.setProperty("--banner-offset", bannerHeight + "px");
+        }
       }
     });
-  });
-
-  // ✅ Scroll effect for header
-  window.addEventListener('scroll', () => {
-    const header = document.getElementById('site-header');
-    if (!header) return;
-
-    header.classList.toggle('shrink', window.scrollY > 50);
-    header.classList.toggle('scrolled', window.scrollY > 20);
-  });
-
-  // ✅ Animate skill bars
-  document.querySelectorAll('.skill-level').forEach(el => {
-    const width = el.style.width;
-    el.style.width = '0';
-    setTimeout(() => {
-      el.style.width = width;
-    }, 100);
-  });
-
-  // ✅ Function to adjust spacing for "About"
-  function adjustAboutOffset() {
-    const banner = document.getElementById("site-header");
-    const about = document.querySelector("main");
-
-    if (banner && about) {
-      const styles = getComputedStyle(banner);
-      const paddingTop = parseFloat(styles.paddingTop) || 0;
-      const bannerHeight = banner.getBoundingClientRect().height - paddingTop;
-      about.style.setProperty("--banner-offset", bannerHeight + "px");
-    }
-  }
 });
+
 

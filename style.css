@@ -449,6 +449,7 @@ footer {
   #nav-menu.show {
       display: flex;              /* show in a row */
       flex-direction: row;        /* ensure horizontal layout */
+      flex-wrap: wrap;
   }
 
   #nav-menu a {
@@ -456,6 +457,7 @@ footer {
       display: inline-block;
   }
 }
+
 
 
 

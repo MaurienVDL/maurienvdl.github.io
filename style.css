@@ -427,7 +427,6 @@ footer {
       flex-direction: row;        /* logo + toggle stay side by side */
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;            /* allows nav to drop below */
   }
 
   /* Nav styles */
@@ -452,6 +451,7 @@ footer {
       display: inline-block;
   }
 }
+
 
 
 

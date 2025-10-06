@@ -438,6 +438,7 @@ footer {
   /* Nav styles */
   #nav-menu {
       display: flex;              /* hidden until toggled */
+      flex-wrap: wrap;
       width: 100%;                /* full width under header */
       justify-content: center;    /* center horizontally */
       gap: 1rem;                  /* space between links */
@@ -466,6 +467,7 @@ footer {
       display: inline-block;
   }
 }
+
 
 
 

@@ -44,10 +44,14 @@ document.addEventListener('DOMContentLoaded', () => {
           });
         });
 
-        if (!nav.contains(event.target) && !menuBtn.contains(event.target)) {
-          nav.classList.remove('show');
-        }
-     });
+        // ✅ Collapse when clicking outside the menu
+        document.addEventListener('click', (event) => {
+          if (!nav.contains(event.target) && !menuBtn.contains(event.target)) {
+            nav.classList.remove('show');
+          }
+        });
+      } // closes "if (menuBtn && nav)"
+    });
 
   // ✅ Load Footer
   fetch('footer.html')

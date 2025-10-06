@@ -429,6 +429,7 @@ footer {
       align-items: center;
       justify-content: right;
       flex-wrap: wrap;
+      gap: 1rem;
   }
     
   #site-header.shrink {
@@ -467,6 +468,7 @@ footer {
       display: inline-block;
   }
 }
+
 
 
 

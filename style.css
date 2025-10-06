@@ -428,6 +428,10 @@ footer {
       align-items: center;
       justify-content: right;
   }
+    
+  #site-header.shrink {
+      padding: 0 var(--space-md); 
+  }
 
   /* Nav styles */
   #nav-menu {
@@ -451,6 +455,7 @@ footer {
       display: inline-block;
   }
 }
+
 
 
 

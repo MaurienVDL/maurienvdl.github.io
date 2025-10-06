@@ -431,7 +431,7 @@ footer {
   }
     
   #site-header.shrink {
-      padding: 0 var(--space-md); 
+      padding: var(--space-sm) var(--space-md);
   }
 
   /* Nav styles */
@@ -457,6 +457,7 @@ footer {
       display: inline-block;
   }
 }
+
 
 
 

@@ -418,21 +418,38 @@ footer {
 }
 
 @media (max-width: 1000px) {
-    #menu-toggle {
-        display: block;
-    }
-    #site-header {
-        display: flex;
-    }
+  /* Keep your existing toggle styles */
+  #menu-toggle {
+      display: block;
+  }
 
-    #nav-menu {
-        display: none;
-    }
+  /* Stack header contents vertically */
+  #site-header {
+      flex-direction: column;     /* stack title/logo and nav */
+      align-items: flex-start;    /* align left (optional) */
+  }
 
-    #nav-menu.show {
-        display: table-column;
-    }
+  /* Make nav full width under header */
+  #nav-menu {
+      display: none;              /* hidden by default */
+      width: 100%;
+      flex-direction: column;     /* vertical links */
+      background: var(--header-bg);
+      padding: 1rem 0;
+      border-top: 1px solid rgba(0,0,0,0.1);
+  }
+
+  #nav-menu.show {
+      display: flex;              /* show when toggled */
+  }
+
+  #nav-menu a {
+      margin: 0.5rem 1.5rem;      /* space between vertical links */
+      display: block;             /* full clickable area */
+  }
 }
+
+
 
 
 

@@ -444,6 +444,11 @@ footer {
       padding-left: 1.5rem;
       border-top: 1px solid rgba(0,0,0,0.1);
       background: var(--header-bg);
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      visibility: hidden; /* 🔧 Added to ensure it’s not focusable/tabbable */
+      transition: max-height 0.5s ease-out, opacity 0.5s ease-out, visibility 0.5s ease-out;
   }
 
   /* When menu is shown */
@@ -451,6 +456,9 @@ footer {
       display: flex;              /* show in a row */
       flex-direction: row;        /* ensure horizontal layout */
       flex-wrap: wrap;
+      max-height: 1500px; /* ⚠️ Works if you know the height; JS can help with auto */
+      opacity: 1;
+      visibility: visible;
   }
 
   #nav-menu a {
@@ -458,6 +466,7 @@ footer {
       display: inline-block;
   }
 }
+
 
 
 

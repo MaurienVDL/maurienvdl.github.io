@@ -36,8 +36,18 @@ document.addEventListener('DOMContentLoaded', () => {
           const expanded = menuBtn.getAttribute("aria-expanded") === "true";
           menuBtn.setAttribute("aria-expanded", !expanded);
         });
-      }
-    });
+
+        // Collapse the menu when any nav link is clicked
+        nav.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            nav.classList.remove('show');
+          });
+        });
+
+        if (!nav.contains(event.target) && !menuBtn.contains(event.target)) {
+          nav.classList.remove('show');
+        }
+     });
 
   // ✅ Load Footer
   fetch('footer.html')

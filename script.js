@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(response => response.text())
     .then(data => {
       document.getElementById('header').innerHTML = data;
-  
+
       // ✅ Attach "Home" smooth scroll after header loads
       const homeLink = document.getElementById("home-link");
       if (homeLink) {
@@ -36,15 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
           const expanded = menuBtn.getAttribute("aria-expanded") === "true";
           menuBtn.setAttribute("aria-expanded", !expanded);
         });
-     
-        // Collapse the menu when any nav link is clicked
-        nav.querySelectorAll('a').forEach(link => {
-          link.addEventListener('click', () => {
-            nav.classList.remove('show');
-          });
-        });
       }
-  
+    });
+
   // ✅ Load Footer
   fetch('footer.html')
     .then(response => response.text())
@@ -98,6 +92,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
-
 
 

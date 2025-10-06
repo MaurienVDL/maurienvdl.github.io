@@ -427,6 +427,7 @@ footer {
       flex-direction: row;        /* logo + toggle stay side by side */
       align-items: center;
       justify-content: right;
+      flex-wrap: wrap;
   }
     
   #site-header.shrink {
@@ -455,6 +456,7 @@ footer {
       display: inline-block;
   }
 }
+
 
 
 

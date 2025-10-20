@@ -461,6 +461,7 @@ footer {
       max-height: 1500px; /* ⚠️ Works if you know the height; JS can help with auto */
       opacity: 1;
       visibility: visible;
+      padding: 0.5rem;
   }
 
   #nav-menu a {
@@ -468,6 +469,7 @@ footer {
       display: inline-block;
   }
 }
+
 
 
 

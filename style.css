@@ -427,7 +427,7 @@ footer {
   #site-header {
       flex-direction: row;        /* logo + toggle stay side by side */
       align-items: center;
-      justify-content: right;
+      justify-content: space-between;
       flex-wrap: wrap;
       gap: 1rem;
   }
@@ -441,7 +441,7 @@ footer {
       display: flex;              /* hidden until toggled */
       flex-wrap: wrap;
       width: 100%;                /* full width under header */
-      justify-content: center;    /* center horizontally */
+      justify-content: right;    
       gap: 1rem;                  /* space between links */
       padding-left: 1.5rem;
       border-top: 1px solid rgba(0,0,0,0.1);
@@ -468,6 +468,7 @@ footer {
       display: inline-block;
   }
 }
+
 
 
 

@@ -15,8 +15,8 @@ m = folium.Map(
     location=location,
     zoom_start=10,
     tiles="Esri.WorldImagery",  # Satellite imagery from Esri
-    width=400,
-    height=300
+    width=350,
+    height=250
 )
 
 # Optional: add a marker

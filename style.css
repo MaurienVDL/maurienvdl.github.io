@@ -114,8 +114,8 @@ figure {
 
 .figure-float-right {
   float: right;
-  margin-bottom: var(--space-md);
-  margin-left: var(--space-md);
+  margin-top: var(--space-sm);
+  margin-left: var(--space-sm);
   text-align: center;
   max-width: 100%; 
   border-radius: 6px; /* round edges instead of circle */
@@ -125,8 +125,8 @@ figure {
 
 .figure-float-left {
   float: left;
-  margin-bottom: var(--space-md);
-  margin-right: var(--space-md);
+  margin-top: var(--space-sm);
+  margin-right: var(--space-sm);
   text-align: center;
   max-width: 100%; 
   border-radius: 6px; /* round edges instead of circle */
@@ -511,6 +511,7 @@ footer {
   }
 
 }
+
 
 
 

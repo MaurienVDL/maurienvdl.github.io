@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_beda53ce4a94aaaded2de526d05d471f {
+                #map_f00d78ee9e0047c87a085c6418530a5b {
                     position: relative;
                     width: 350.0px;
                     height: 250.0px;
@@ -54,20 +54,20 @@
 <body>
     
     
-            <div class="folium-map" id="map_beda53ce4a94aaaded2de526d05d471f" ></div>
+            <div class="folium-map" id="map_f00d78ee9e0047c87a085c6418530a5b" ></div>
         
 </body>
 <script>
     
     
-            var map_beda53ce4a94aaaded2de526d05d471f = L.map(
-                "map_beda53ce4a94aaaded2de526d05d471f",
+            var map_f00d78ee9e0047c87a085c6418530a5b = L.map(
+                "map_f00d78ee9e0047c87a085c6418530a5b",
                 {
                     center: [9.32806779090854, -82.21827582196846],
                     crs: L.CRS.EPSG3857,
                     ...{
   "zoom": 10,
-  "zoomControl": true,
+  "zoomControl": false,
   "preferCanvas": false,
 }
 
@@ -78,7 +78,7 @@
 
         
     
-            var tile_layer_323c3f0d2dc0765089ee5ff0763976a6 = L.tileLayer(
+            var tile_layer_f2904422fd117201633659113305a9b8 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -95,34 +95,34 @@
             );
         
     
-            tile_layer_323c3f0d2dc0765089ee5ff0763976a6.addTo(map_beda53ce4a94aaaded2de526d05d471f);
+            tile_layer_f2904422fd117201633659113305a9b8.addTo(map_f00d78ee9e0047c87a085c6418530a5b);
         
     
-            var marker_858f821e606e97926ce07990110c9c2d = L.marker(
+            var marker_525a6929e0ead909b2d59a521df4f15b = L.marker(
                 [9.32806779090854, -82.21827582196846],
                 {
 }
-            ).addTo(map_beda53ce4a94aaaded2de526d05d471f);
+            ).addTo(map_f00d78ee9e0047c87a085c6418530a5b);
         
     
-        var popup_f9d03a38a004f9ef34c805a4f13e52d8 = L.popup({
+        var popup_0ab0a2ce24722f9a59ca876a4d744a3b = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_df808ba34c0229c70c7413c7a4bc0e99 = $(`<div id="html_df808ba34c0229c70c7413c7a4bc0e99" style="width: 100.0%; height: 100.0%;">Bocas del Toro, Panama</div>`)[0];
-                popup_f9d03a38a004f9ef34c805a4f13e52d8.setContent(html_df808ba34c0229c70c7413c7a4bc0e99);
+                var html_736d762a031af86801f7afb3d001d747 = $(`<div id="html_736d762a031af86801f7afb3d001d747" style="width: 100.0%; height: 100.0%;">Bocas del Toro, Panama</div>`)[0];
+                popup_0ab0a2ce24722f9a59ca876a4d744a3b.setContent(html_736d762a031af86801f7afb3d001d747);
             
         
 
-        marker_858f821e606e97926ce07990110c9c2d.bindPopup(popup_f9d03a38a004f9ef34c805a4f13e52d8)
+        marker_525a6929e0ead909b2d59a521df4f15b.bindPopup(popup_0ab0a2ce24722f9a59ca876a4d744a3b)
         ;
 
         
     
     
-            marker_858f821e606e97926ce07990110c9c2d.bindTooltip(
+            marker_525a6929e0ead909b2d59a521df4f15b.bindTooltip(
                 `<div>
                      Ankay Conservation Centre
                  </div>`,

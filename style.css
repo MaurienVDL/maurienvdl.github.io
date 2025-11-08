@@ -112,6 +112,24 @@ figure {
     margin-inline: 0rem;
 }
 
+.figure-float-right {
+  float: right;
+  margin: 0 0 1em 1em;
+  text-align: center;
+  max-width: 300px;
+}
+
+.figure-float-right img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.figure-float-right figcaption {
+  font-size: 0.75em;
+  text-align: center;
+}
+
 /* Header */
 #site-header {
     position: fixed;
@@ -468,7 +486,15 @@ footer {
       margin: 0;                  /* reset spacing */
       display: inline-block;
   }
+    
+  .figure-float-right {
+     float: none;
+     margin: 1em auto;
+     display: block;
+  }
+
 }
+
 
 
 

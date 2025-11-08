@@ -17,14 +17,14 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_f00d78ee9e0047c87a085c6418530a5b {
+                #map_aa7c72ff7104adf7a8b8617e0aa8e4d6 {
                     position: relative;
                     width: 350.0px;
                     height: 250.0px;
                     left: 0.0%;
                     top: 0.0%;
                 }
-                .leaflet-container { font-size: 0.5rem; }
+                .leaflet-container { font-size: 1rem; }
             </style>
 
             <style>html, body {
@@ -54,19 +54,19 @@
 <body>
     
     
-            <div class="folium-map" id="map_f00d78ee9e0047c87a085c6418530a5b" ></div>
+            <div class="folium-map" id="map_aa7c72ff7104adf7a8b8617e0aa8e4d6" ></div>
         
 </body>
 <script>
     
     
-            var map_f00d78ee9e0047c87a085c6418530a5b = L.map(
-                "map_f00d78ee9e0047c87a085c6418530a5b",
+            var map_aa7c72ff7104adf7a8b8617e0aa8e4d6 = L.map(
+                "map_aa7c72ff7104adf7a8b8617e0aa8e4d6",
                 {
                     center: [9.32806779090854, -82.21827582196846],
                     crs: L.CRS.EPSG3857,
                     ...{
-  "zoom": 10,
+  "zoom": 6,
   "zoomControl": false,
   "preferCanvas": false,
 }
@@ -78,14 +78,14 @@
 
         
     
-            var tile_layer_f2904422fd117201633659113305a9b8 = L.tileLayer(
-                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+            var tile_layer_23b11b2dba9ae5db801d4e9f94ef1ddb = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
-  "maxZoom": 18,
-  "maxNativeZoom": 18,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
   "noWrap": false,
-  "attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
   "subdomains": "abc",
   "detectRetina": false,
   "tms": false,
@@ -95,34 +95,34 @@
             );
         
     
-            tile_layer_f2904422fd117201633659113305a9b8.addTo(map_f00d78ee9e0047c87a085c6418530a5b);
+            tile_layer_23b11b2dba9ae5db801d4e9f94ef1ddb.addTo(map_aa7c72ff7104adf7a8b8617e0aa8e4d6);
         
     
-            var marker_525a6929e0ead909b2d59a521df4f15b = L.marker(
+            var marker_fa3445fd78df875dc7078d8fbd4d7c2c = L.marker(
                 [9.32806779090854, -82.21827582196846],
                 {
 }
-            ).addTo(map_f00d78ee9e0047c87a085c6418530a5b);
+            ).addTo(map_aa7c72ff7104adf7a8b8617e0aa8e4d6);
         
     
-        var popup_0ab0a2ce24722f9a59ca876a4d744a3b = L.popup({
+        var popup_8c028a4c38a340eb31abdd6e3ebc25ee = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_736d762a031af86801f7afb3d001d747 = $(`<div id="html_736d762a031af86801f7afb3d001d747" style="width: 100.0%; height: 100.0%;">Bocas del Toro, Panama</div>`)[0];
-                popup_0ab0a2ce24722f9a59ca876a4d744a3b.setContent(html_736d762a031af86801f7afb3d001d747);
+                var html_cbf12cc3386f1c606cc0ae6aba9c45c9 = $(`<div id="html_cbf12cc3386f1c606cc0ae6aba9c45c9" style="width: 100.0%; height: 100.0%;">Bocas del Toro, Panama</div>`)[0];
+                popup_8c028a4c38a340eb31abdd6e3ebc25ee.setContent(html_cbf12cc3386f1c606cc0ae6aba9c45c9);
             
         
 
-        marker_525a6929e0ead909b2d59a521df4f15b.bindPopup(popup_0ab0a2ce24722f9a59ca876a4d744a3b)
+        marker_fa3445fd78df875dc7078d8fbd4d7c2c.bindPopup(popup_8c028a4c38a340eb31abdd6e3ebc25ee)
         ;
 
         
     
     
-            marker_525a6929e0ead909b2d59a521df4f15b.bindTooltip(
+            marker_fa3445fd78df875dc7078d8fbd4d7c2c.bindTooltip(
                 `<div>
                      Ankay Conservation Centre
                  </div>`,

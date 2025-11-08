@@ -15,6 +15,9 @@ m = folium.Map(
     location=location,
     zoom_start=10,
     tiles="Esri.WorldImagery",  # Satellite imagery from Esri
+    attr="",                     # removes attribution text (if possible)
+    control_scale=False,         # optional: hides scale bar
+    zoom_control=False,     # removes zoom buttons
     width=350,
     height=250
 )

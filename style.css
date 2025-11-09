@@ -112,6 +112,12 @@ figure {
     margin-inline: 0rem;
 }
 
+iframe {
+  overflow: visible !important;   /* show full content */
+  border: none !important;        /* remove inset border */
+  border-radius: 6px;             /* optional, for smooth corners */
+}
+
 .figure-float-right {
   float: right;
   margin-top: var(--space-sm);
@@ -511,6 +517,7 @@ footer {
   }
 
 }
+
 
 
 

@@ -506,12 +506,8 @@ footer {
       opacity: 1;
       visibility: visible;
       padding: 0.5rem;
+      padding-bottom: 0;
   }
-
-    /* When the menu is shown, remove header bottom padding */
-    .site-header.nav-open {
-        padding-bottom: 0 !important;
-    }
     
   #nav-menu a {
       margin: 0;                  /* reset spacing */
@@ -527,6 +523,7 @@ footer {
       text-align: center;
     }
 }
+
 
 
 

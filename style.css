@@ -106,18 +106,15 @@ ul li::before {
     margin-left: -1.5rem;/* Adjust position to align with text */
 }
 
-figure {
-    display: block;
-    margin-block: 1rem;
-    margin-inline: 0rem;
-}
-
-iframe {
+.figure-float-right iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;   /* maintains shape responsively */
   overflow: visible !important;   /* show full content */
   border: none !important;        /* remove inset border */
   border-radius: 6px;             /* optional, for smooth corners */
 }
-
 .figure-float-right {
   float: right;
   margin-top: var(--space-sm);
@@ -517,6 +514,7 @@ footer {
   }
 
 }
+
 
 
 

@@ -474,7 +474,8 @@ footer {
       flex-direction: row;        /* logo + toggle stay side by side */
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
+      flex-wrap: wrap;      
+      gap: 0.5rem;
   }
     
   #site-header.shrink {
@@ -523,6 +524,7 @@ footer {
       text-align: center;
     }
 }
+
 
 
 

@@ -106,6 +106,12 @@ ul li::before {
     margin-left: -1.5rem;/* Adjust position to align with text */
 }
 
+figure {
+    display: block;
+    margin-block: 1rem;
+    margin-inline: 0rem;
+}
+
 .figure-float-right iframe {
   display: block;
   width: 100%;
@@ -510,6 +516,7 @@ footer {
   }
     
 }
+
 
 
 

@@ -507,12 +507,12 @@ footer {
   }
     
   .figure-float-right {
-     float: none;
      margin: 1em auto;
      display: block;
   }
 
 }
+
 
 
 

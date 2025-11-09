@@ -102,19 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
       el.style.width = width;
     }, 100);
   });
-
-  // ✅ Function to adjust spacing for "About"
-  function adjustAboutOffset() {
-    const banner = document.getElementById("site-header");
-    const about = document.querySelector("main");
-
-    if (banner && about) {
-      const styles = getComputedStyle(banner);
-      const paddingTop = parseFloat(styles.paddingTop) || 0;
-      const bannerHeight = banner.getBoundingClientRect().height - paddingTop;
-      about.style.setProperty("--banner-offset", bannerHeight + "px");
-    }
-  }
 });
 
 

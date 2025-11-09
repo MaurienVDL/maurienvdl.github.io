@@ -475,7 +475,6 @@ footer {
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 1rem;
   }
     
   #site-header.shrink {
@@ -509,6 +508,12 @@ footer {
       padding: 0.5rem;
   }
 
+  /* When the menu is open, remove padding */
+ .site-header .menu.show ~ * ,
+ .site-header .menu.show {
+    padding-bottom: 0 !important;
+  }
+    
   #nav-menu a {
       margin: 0;                  /* reset spacing */
       display: inline-block;
@@ -523,6 +528,7 @@ footer {
       text-align: center;
     }
 }
+
 
 
 

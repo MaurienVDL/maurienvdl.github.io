@@ -51,6 +51,16 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
       } // closes "if (menuBtn && nav)"
+
+      const header = document.querySelector('.site-header');
+      const menu = document.getElementById('nav-menu');
+      const toggle = document.getElementById('menu-toggle');
+      
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('show');         // toggle menu visibility
+        header.classList.toggle('nav-open');   // adjust header padding
+      });
+      
     });
 
   // ✅ Load Footer

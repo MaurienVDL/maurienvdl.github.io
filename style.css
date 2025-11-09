@@ -108,7 +108,6 @@ ul li::before {
 
 .figure-float-right iframe {
   display: block;
-  margin: 0;
   width: 100%;
   height: auto;
   aspect-ratio: 3 / 2
@@ -120,6 +119,7 @@ ul li::before {
   float: right;
   margin-top: var(--space-sm);
   margin-left: var(--space-sm);
+  margin-right: 0;
   text-align: center;
   max-width: 100%; 
   border-radius: 6px; /* round edges instead of circle */
@@ -131,6 +131,7 @@ ul li::before {
   float: left;
   margin-top: var(--space-sm);
   margin-right: var(--space-sm);
+  margin-left: 0
   text-align: center;
   max-width: 100%; 
   border-radius: 6px; /* round edges instead of circle */
@@ -509,6 +510,7 @@ footer {
   }
     
 }
+
 
 
 

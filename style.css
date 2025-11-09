@@ -172,6 +172,7 @@ figure {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 2rem;
+    padding-bottom: 1rem; /*Padding minus gap nav-menu.show */
     transition: all 0.3s ease;
     z-index: 1000;
     box-shadow: var(--header-shadow);
@@ -524,6 +525,7 @@ footer {
       text-align: center;
     }
 }
+
 
 
 

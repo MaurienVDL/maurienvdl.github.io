@@ -506,6 +506,7 @@ footer {
       opacity: 1;
       visibility: visible;
       padding: 0.5rem;
+      padding-bottom: 0;
   }
 
   /* When the menu is open, remove padding */
@@ -528,6 +529,7 @@ footer {
       text-align: center;
     }
 }
+
 
 
 

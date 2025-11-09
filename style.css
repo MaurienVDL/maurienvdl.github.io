@@ -517,12 +517,14 @@ footer {
 
   .figure-float-right,
   .figure-float-left {
-      float: right;
-      margin-left: 0;
+      float: right; /* all images right on small screen */
+      margin-left: var(--space-sm);
+      margin-bottom: var(--space-sm);
       margin-right: 0;
       text-align: center;
     }
 }
+
 
 
 

@@ -51,16 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
       } // closes "if (menuBtn && nav)"
-
-      const header = document.querySelector('.site-header');
-      const menu = document.getElementById('nav-menu');
-      const toggle = document.getElementById('menu-toggle');
-      
-      toggle.addEventListener('click', () => {
-        menu.classList.toggle('show');         // toggle menu visibility
-        header.classList.toggle('nav-open');   // adjust header padding
-      });
-      
     });
 
   // ✅ Load Footer
@@ -102,6 +92,19 @@ document.addEventListener('DOMContentLoaded', () => {
       el.style.width = width;
     }, 100);
   });
+
+  // ✅ Function to adjust spacing for "About"
+  function adjustAboutOffset() {
+    const banner = document.getElementById("site-header");
+    const about = document.querySelector("main");
+
+    if (banner && about) {
+      const styles = getComputedStyle(banner);
+      const paddingTop = parseFloat(styles.paddingTop) || 0;
+      const bannerHeight = banner.getBoundingClientRect().height - paddingTop;
+      about.style.setProperty("--banner-offset", bannerHeight + "px");
+    }
+  }
 });
 
 

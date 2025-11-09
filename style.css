@@ -110,6 +110,7 @@ ul li::before {
   display: block;
   width: 100%;
   height: auto;
+  aspect-ratio: 3 / 2
   overflow: visible !important;   /* show full content */
   border: none !important;        /* remove inset border */
   border-radius: 6px;             /* optional, for smooth corners */
@@ -512,6 +513,7 @@ footer {
   }
 
 }
+
 
 
 

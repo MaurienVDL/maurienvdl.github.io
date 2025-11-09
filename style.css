@@ -110,6 +110,8 @@ figure {
     display: block;
     margin-block: 1rem;
     margin-inline: 0rem;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .figure-float-right iframe {
@@ -149,7 +151,6 @@ figure {
 .figure-float-left img {
   width: 100%;
   height: auto;
-  border-radius: 4px;
 }
 
 .figure-float-right figcaption,
@@ -514,8 +515,16 @@ footer {
       margin: 0;                  /* reset spacing */
       display: inline-block;
   }
-    
+
+  .figure-float-right,
+  .figure-float-left {
+      float: right;
+      margin-left: 0;
+      margin-right: 0;
+      text-align: center;
+    }
 }
+
 
 
 

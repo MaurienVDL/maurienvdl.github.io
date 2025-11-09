@@ -13,8 +13,8 @@ location = [9.32806779090854, -82.21827582196846]
 # Create a small map
 m = folium.Map(
     location=location,
-    zoom_start=10,
-    tiles="Esri.WorldImagery",  # Satellite imagery from Esri
+    zoom_start=6,
+    # tiles="Esri.WorldImagery",  # Satellite imagery from Esri
     attr="",                     # removes attribution text (if possible)
     control_scale=False,         # optional: hides scale bar
     zoom_control=False,     # removes zoom buttons

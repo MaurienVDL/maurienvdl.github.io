@@ -496,7 +496,7 @@ footer {
       visibility: hidden; /* 🔧 Added to ensure it’s not focusable/tabbable */
       transition: max-height 0.5s ease-out, opacity 0.5s ease-out, visibility 0.5s ease-out;
   }
-
+        
   /* When menu is shown */
   #nav-menu.show {
       display: flex;              /* show in a row */
@@ -506,14 +506,12 @@ footer {
       opacity: 1;
       visibility: visible;
       padding: 0.5rem;
-      padding-bottom: 0;
   }
 
-  /* When the menu is open, remove padding */
- .site-header .menu.show ~ * ,
- .site-header .menu.show {
-    padding-bottom: 0 !important;
-  }
+    /* When the menu is shown, remove header bottom padding */
+    .site-header.nav-open {
+        padding-bottom: 0 !important;
+    }
     
   #nav-menu a {
       margin: 0;                  /* reset spacing */
@@ -529,6 +527,7 @@ footer {
       text-align: center;
     }
 }
+
 
 
 

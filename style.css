@@ -117,8 +117,8 @@ figure {
 .figure-float-right iframe {
   display: block;
   width: 100%;
-  height: auto;
-  overflow: visible !important;   /* show full content */
+  height: 100%;
+  /*overflow: visible !important; */  /* show full content */
   border: none !important;        /* remove inset border */
   border-radius: 6px;             /* optional, for smooth corners */
 }
@@ -524,6 +524,7 @@ footer {
       text-align: center;
     }
 }
+
 
 
 
